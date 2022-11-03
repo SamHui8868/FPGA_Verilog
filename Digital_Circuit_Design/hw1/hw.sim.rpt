@@ -1,0 +1,729 @@
+Simulator report for hw
+Sun Sep 29 22:18:09 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 292 nodes    ;
+; Simulation Coverage         ;       5.84 % ;
+; Total Number of Transitions ; 333          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                    ;
++--------------------------------------------------------------------------------------------+------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                  ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                               ; Timing        ;
+; Start time                                                                                 ; 0 ns                                     ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                      ;               ;
+; Vector input source                                                                        ; C:/Users/user/Desktop/EE exp3/hw1/hw.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                       ; On            ;
+; Check outputs                                                                              ; Off                                      ; Off           ;
+; Report simulation coverage                                                                 ; On                                       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                       ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                       ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                       ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                      ; Off           ;
+; Detect glitches                                                                            ; Off                                      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                      ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                               ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                      ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                     ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++------------------------------------------------------------------------------------------+
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       5.84 % ;
+; Total nodes checked                                 ; 292          ;
+; Total output ports checked                          ; 291          ;
+; Total output ports with complete 1/0-value coverage ; 17           ;
+; Total output ports with no 1/0-value coverage       ; 269          ;
+; Total output ports with no 1-value coverage         ; 269          ;
+; Total output ports with no 0-value coverage         ; 274          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                  ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |hw1|f                      ; |hw1|f                      ; out              ;
+; |hw1|sel                    ; |hw1|sel                    ; out              ;
+; |hw1|fDIV27M:inst4|count~28 ; |hw1|fDIV27M:inst4|count~28 ; out              ;
+; |hw1|fDIV27M:inst4|count~29 ; |hw1|fDIV27M:inst4|count~29 ; out              ;
+; |hw1|fDIV27M:inst4|count~30 ; |hw1|fDIV27M:inst4|count~30 ; out              ;
+; |hw1|fDIV27M:inst4|count~31 ; |hw1|fDIV27M:inst4|count~31 ; out              ;
+; |hw1|fDIV27M:inst4|count[0] ; |hw1|fDIV27M:inst4|count[0] ; regout           ;
+; |hw1|fDIV27M:inst4|count[1] ; |hw1|fDIV27M:inst4|count[1] ; regout           ;
+; |hw1|fDIV27M:inst4|count[2] ; |hw1|fDIV27M:inst4|count[2] ; regout           ;
+; |hw1|fDIV27M:inst4|count[3] ; |hw1|fDIV27M:inst4|count[3] ; regout           ;
+; |hw1|Mux2to1_5:inst1|Y[0]   ; |hw1|Mux2to1_5:inst1|Y[0]   ; out              ;
+; |hw1|fDIV27M:inst4|Add0~0   ; |hw1|fDIV27M:inst4|Add0~0   ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~1   ; |hw1|fDIV27M:inst4|Add0~1   ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~2   ; |hw1|fDIV27M:inst4|Add0~2   ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~3   ; |hw1|fDIV27M:inst4|Add0~3   ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~4   ; |hw1|fDIV27M:inst4|Add0~4   ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~5   ; |hw1|fDIV27M:inst4|Add0~5   ; out0             ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                  ; Output Port Name                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; |hw1|_7seg1[6]                                                                             ; |hw1|_7seg1[6]                                                                       ; pin_out          ;
+; |hw1|_7seg1[5]                                                                             ; |hw1|_7seg1[5]                                                                       ; pin_out          ;
+; |hw1|_7seg1[4]                                                                             ; |hw1|_7seg1[4]                                                                       ; pin_out          ;
+; |hw1|_7seg1[3]                                                                             ; |hw1|_7seg1[3]                                                                       ; pin_out          ;
+; |hw1|_7seg1[2]                                                                             ; |hw1|_7seg1[2]                                                                       ; pin_out          ;
+; |hw1|_7seg1[1]                                                                             ; |hw1|_7seg1[1]                                                                       ; pin_out          ;
+; |hw1|_7seg1[0]                                                                             ; |hw1|_7seg1[0]                                                                       ; pin_out          ;
+; |hw1|dsw[4]                                                                                ; |hw1|dsw[4]                                                                          ; out              ;
+; |hw1|dsw[3]                                                                                ; |hw1|dsw[3]                                                                          ; out              ;
+; |hw1|dsw[2]                                                                                ; |hw1|dsw[2]                                                                          ; out              ;
+; |hw1|dsw[1]                                                                                ; |hw1|dsw[1]                                                                          ; out              ;
+; |hw1|dsw[0]                                                                                ; |hw1|dsw[0]                                                                          ; out              ;
+; |hw1|_7seg2[6]                                                                             ; |hw1|_7seg2[6]                                                                       ; pin_out          ;
+; |hw1|_7seg2[5]                                                                             ; |hw1|_7seg2[5]                                                                       ; pin_out          ;
+; |hw1|_7seg2[4]                                                                             ; |hw1|_7seg2[4]                                                                       ; pin_out          ;
+; |hw1|_7seg2[3]                                                                             ; |hw1|_7seg2[3]                                                                       ; pin_out          ;
+; |hw1|_7seg2[2]                                                                             ; |hw1|_7seg2[2]                                                                       ; pin_out          ;
+; |hw1|_7seg2[1]                                                                             ; |hw1|_7seg2[1]                                                                       ; pin_out          ;
+; |hw1|_7seg2[0]                                                                             ; |hw1|_7seg2[0]                                                                       ; pin_out          ;
+; |hw1|_7segENC:inst5|WideOr0                                                                ; |hw1|_7segENC:inst5|WideOr0                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr1                                                                ; |hw1|_7segENC:inst5|WideOr1                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr2                                                                ; |hw1|_7segENC:inst5|WideOr2                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr3                                                                ; |hw1|_7segENC:inst5|WideOr3                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr4                                                                ; |hw1|_7segENC:inst5|WideOr4                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr5                                                                ; |hw1|_7segENC:inst5|WideOr5                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr6                                                                ; |hw1|_7segENC:inst5|WideOr6                                                          ; out0             ;
+; |hw1|fDIV27M:inst4|count~0                                                                 ; |hw1|fDIV27M:inst4|count~0                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~1                                                                 ; |hw1|fDIV27M:inst4|count~1                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~2                                                                 ; |hw1|fDIV27M:inst4|count~2                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~3                                                                 ; |hw1|fDIV27M:inst4|count~3                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~4                                                                 ; |hw1|fDIV27M:inst4|count~4                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~5                                                                 ; |hw1|fDIV27M:inst4|count~5                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~6                                                                 ; |hw1|fDIV27M:inst4|count~6                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~7                                                                 ; |hw1|fDIV27M:inst4|count~7                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~8                                                                 ; |hw1|fDIV27M:inst4|count~8                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~9                                                                 ; |hw1|fDIV27M:inst4|count~9                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~10                                                                ; |hw1|fDIV27M:inst4|count~10                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~11                                                                ; |hw1|fDIV27M:inst4|count~11                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~12                                                                ; |hw1|fDIV27M:inst4|count~12                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~13                                                                ; |hw1|fDIV27M:inst4|count~13                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~14                                                                ; |hw1|fDIV27M:inst4|count~14                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~15                                                                ; |hw1|fDIV27M:inst4|count~15                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~16                                                                ; |hw1|fDIV27M:inst4|count~16                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~17                                                                ; |hw1|fDIV27M:inst4|count~17                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~18                                                                ; |hw1|fDIV27M:inst4|count~18                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~19                                                                ; |hw1|fDIV27M:inst4|count~19                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~20                                                                ; |hw1|fDIV27M:inst4|count~20                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~21                                                                ; |hw1|fDIV27M:inst4|count~21                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~22                                                                ; |hw1|fDIV27M:inst4|count~22                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~23                                                                ; |hw1|fDIV27M:inst4|count~23                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~24                                                                ; |hw1|fDIV27M:inst4|count~24                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~25                                                                ; |hw1|fDIV27M:inst4|count~25                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~26                                                                ; |hw1|fDIV27M:inst4|count~26                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count[5]                                                                ; |hw1|fDIV27M:inst4|count[5]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[6]                                                                ; |hw1|fDIV27M:inst4|count[6]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[7]                                                                ; |hw1|fDIV27M:inst4|count[7]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[8]                                                                ; |hw1|fDIV27M:inst4|count[8]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[9]                                                                ; |hw1|fDIV27M:inst4|count[9]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[10]                                                               ; |hw1|fDIV27M:inst4|count[10]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[11]                                                               ; |hw1|fDIV27M:inst4|count[11]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[12]                                                               ; |hw1|fDIV27M:inst4|count[12]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[13]                                                               ; |hw1|fDIV27M:inst4|count[13]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[14]                                                               ; |hw1|fDIV27M:inst4|count[14]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[15]                                                               ; |hw1|fDIV27M:inst4|count[15]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[16]                                                               ; |hw1|fDIV27M:inst4|count[16]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[17]                                                               ; |hw1|fDIV27M:inst4|count[17]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[18]                                                               ; |hw1|fDIV27M:inst4|count[18]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[19]                                                               ; |hw1|fDIV27M:inst4|count[19]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[20]                                                               ; |hw1|fDIV27M:inst4|count[20]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[21]                                                               ; |hw1|fDIV27M:inst4|count[21]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[22]                                                               ; |hw1|fDIV27M:inst4|count[22]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[23]                                                               ; |hw1|fDIV27M:inst4|count[23]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[24]                                                               ; |hw1|fDIV27M:inst4|count[24]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[25]                                                               ; |hw1|fDIV27M:inst4|count[25]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[26]                                                               ; |hw1|fDIV27M:inst4|count[26]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[27]                                                               ; |hw1|fDIV27M:inst4|count[27]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[28]                                                               ; |hw1|fDIV27M:inst4|count[28]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[29]                                                               ; |hw1|fDIV27M:inst4|count[29]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[30]                                                               ; |hw1|fDIV27M:inst4|count[30]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[31]                                                               ; |hw1|fDIV27M:inst4|count[31]                                                         ; regout           ;
+; |hw1|AGU:inst3|A[1]                                                                        ; |hw1|AGU:inst3|A[1]                                                                  ; regout           ;
+; |hw1|AGU:inst3|A[2]                                                                        ; |hw1|AGU:inst3|A[2]                                                                  ; regout           ;
+; |hw1|AGU:inst3|A[3]                                                                        ; |hw1|AGU:inst3|A[3]                                                                  ; regout           ;
+; |hw1|AGU:inst3|A[4]                                                                        ; |hw1|AGU:inst3|A[4]                                                                  ; regout           ;
+; |hw1|Mux2to1_5:inst1|Y[4]                                                                  ; |hw1|Mux2to1_5:inst1|Y[4]                                                            ; out              ;
+; |hw1|Mux2to1_5:inst1|Y[3]                                                                  ; |hw1|Mux2to1_5:inst1|Y[3]                                                            ; out              ;
+; |hw1|Mux2to1_5:inst1|Y[2]                                                                  ; |hw1|Mux2to1_5:inst1|Y[2]                                                            ; out              ;
+; |hw1|Mux2to1_5:inst1|Y[1]                                                                  ; |hw1|Mux2to1_5:inst1|Y[1]                                                            ; out              ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[0] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[1] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[2] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[3] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[4] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[5] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[6] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[7] ; portadataout0    ;
+; |hw1|_7segENC:inst2|WideOr0                                                                ; |hw1|_7segENC:inst2|WideOr0                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr1                                                                ; |hw1|_7segENC:inst2|WideOr1                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr2                                                                ; |hw1|_7segENC:inst2|WideOr2                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr3                                                                ; |hw1|_7segENC:inst2|WideOr3                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr4                                                                ; |hw1|_7segENC:inst2|WideOr4                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr5                                                                ; |hw1|_7segENC:inst2|WideOr5                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr6                                                                ; |hw1|_7segENC:inst2|WideOr6                                                          ; out0             ;
+; |hw1|_7segENC:inst5|Decoder0~0                                                             ; |hw1|_7segENC:inst5|Decoder0~0                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~1                                                             ; |hw1|_7segENC:inst5|Decoder0~1                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~2                                                             ; |hw1|_7segENC:inst5|Decoder0~2                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~3                                                             ; |hw1|_7segENC:inst5|Decoder0~3                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~4                                                             ; |hw1|_7segENC:inst5|Decoder0~4                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~5                                                             ; |hw1|_7segENC:inst5|Decoder0~5                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~6                                                             ; |hw1|_7segENC:inst5|Decoder0~6                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~7                                                             ; |hw1|_7segENC:inst5|Decoder0~7                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~8                                                             ; |hw1|_7segENC:inst5|Decoder0~8                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~9                                                             ; |hw1|_7segENC:inst5|Decoder0~9                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~10                                                            ; |hw1|_7segENC:inst5|Decoder0~10                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~11                                                            ; |hw1|_7segENC:inst5|Decoder0~11                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~12                                                            ; |hw1|_7segENC:inst5|Decoder0~12                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~13                                                            ; |hw1|_7segENC:inst5|Decoder0~13                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~14                                                            ; |hw1|_7segENC:inst5|Decoder0~14                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~0                                                             ; |hw1|_7segENC:inst2|Decoder0~0                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~1                                                             ; |hw1|_7segENC:inst2|Decoder0~1                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~2                                                             ; |hw1|_7segENC:inst2|Decoder0~2                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~3                                                             ; |hw1|_7segENC:inst2|Decoder0~3                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~4                                                             ; |hw1|_7segENC:inst2|Decoder0~4                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~5                                                             ; |hw1|_7segENC:inst2|Decoder0~5                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~6                                                             ; |hw1|_7segENC:inst2|Decoder0~6                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~7                                                             ; |hw1|_7segENC:inst2|Decoder0~7                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~8                                                             ; |hw1|_7segENC:inst2|Decoder0~8                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~9                                                             ; |hw1|_7segENC:inst2|Decoder0~9                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~10                                                            ; |hw1|_7segENC:inst2|Decoder0~10                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~11                                                            ; |hw1|_7segENC:inst2|Decoder0~11                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~12                                                            ; |hw1|_7segENC:inst2|Decoder0~12                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~13                                                            ; |hw1|_7segENC:inst2|Decoder0~13                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~14                                                            ; |hw1|_7segENC:inst2|Decoder0~14                                                      ; out              ;
+; |hw1|fDIV27M:inst4|LessThan0~0                                                             ; |hw1|fDIV27M:inst4|LessThan0~0                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~1                                                             ; |hw1|fDIV27M:inst4|LessThan0~1                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~2                                                             ; |hw1|fDIV27M:inst4|LessThan0~2                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~3                                                             ; |hw1|fDIV27M:inst4|LessThan0~3                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~4                                                             ; |hw1|fDIV27M:inst4|LessThan0~4                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~5                                                             ; |hw1|fDIV27M:inst4|LessThan0~5                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~6                                                             ; |hw1|fDIV27M:inst4|LessThan0~6                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~7                                                             ; |hw1|fDIV27M:inst4|LessThan0~7                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~8                                                             ; |hw1|fDIV27M:inst4|LessThan0~8                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~9                                                             ; |hw1|fDIV27M:inst4|LessThan0~9                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~10                                                            ; |hw1|fDIV27M:inst4|LessThan0~10                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~11                                                            ; |hw1|fDIV27M:inst4|LessThan0~11                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~12                                                            ; |hw1|fDIV27M:inst4|LessThan0~12                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~13                                                            ; |hw1|fDIV27M:inst4|LessThan0~13                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~14                                                            ; |hw1|fDIV27M:inst4|LessThan0~14                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~15                                                            ; |hw1|fDIV27M:inst4|LessThan0~15                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~16                                                            ; |hw1|fDIV27M:inst4|LessThan0~16                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~17                                                            ; |hw1|fDIV27M:inst4|LessThan0~17                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~18                                                            ; |hw1|fDIV27M:inst4|LessThan0~18                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~19                                                            ; |hw1|fDIV27M:inst4|LessThan0~19                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~20                                                            ; |hw1|fDIV27M:inst4|LessThan0~20                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~21                                                            ; |hw1|fDIV27M:inst4|LessThan0~21                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~22                                                            ; |hw1|fDIV27M:inst4|LessThan0~22                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~23                                                            ; |hw1|fDIV27M:inst4|LessThan0~23                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~24                                                            ; |hw1|fDIV27M:inst4|LessThan0~24                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~25                                                            ; |hw1|fDIV27M:inst4|LessThan0~25                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~26                                                            ; |hw1|fDIV27M:inst4|LessThan0~26                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~27                                                            ; |hw1|fDIV27M:inst4|LessThan0~27                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~28                                                            ; |hw1|fDIV27M:inst4|LessThan0~28                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~29                                                            ; |hw1|fDIV27M:inst4|LessThan0~29                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~30                                                            ; |hw1|fDIV27M:inst4|LessThan0~30                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~31                                                            ; |hw1|fDIV27M:inst4|LessThan0~31                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~32                                                            ; |hw1|fDIV27M:inst4|LessThan0~32                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~33                                                            ; |hw1|fDIV27M:inst4|LessThan0~33                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~34                                                            ; |hw1|fDIV27M:inst4|LessThan0~34                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~35                                                            ; |hw1|fDIV27M:inst4|LessThan0~35                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~36                                                            ; |hw1|fDIV27M:inst4|LessThan0~36                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~0                                                             ; |hw1|fDIV27M:inst4|LessThan1~0                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~1                                                             ; |hw1|fDIV27M:inst4|LessThan1~1                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~2                                                             ; |hw1|fDIV27M:inst4|LessThan1~2                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~3                                                             ; |hw1|fDIV27M:inst4|LessThan1~3                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~4                                                             ; |hw1|fDIV27M:inst4|LessThan1~4                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~5                                                             ; |hw1|fDIV27M:inst4|LessThan1~5                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~6                                                             ; |hw1|fDIV27M:inst4|LessThan1~6                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~7                                                             ; |hw1|fDIV27M:inst4|LessThan1~7                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~8                                                             ; |hw1|fDIV27M:inst4|LessThan1~8                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~9                                                             ; |hw1|fDIV27M:inst4|LessThan1~9                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~10                                                            ; |hw1|fDIV27M:inst4|LessThan1~10                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~11                                                            ; |hw1|fDIV27M:inst4|LessThan1~11                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~12                                                            ; |hw1|fDIV27M:inst4|LessThan1~12                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~13                                                            ; |hw1|fDIV27M:inst4|LessThan1~13                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~14                                                            ; |hw1|fDIV27M:inst4|LessThan1~14                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~15                                                            ; |hw1|fDIV27M:inst4|LessThan1~15                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~16                                                            ; |hw1|fDIV27M:inst4|LessThan1~16                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~17                                                            ; |hw1|fDIV27M:inst4|LessThan1~17                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~18                                                            ; |hw1|fDIV27M:inst4|LessThan1~18                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~19                                                            ; |hw1|fDIV27M:inst4|LessThan1~19                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~20                                                            ; |hw1|fDIV27M:inst4|LessThan1~20                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~21                                                            ; |hw1|fDIV27M:inst4|LessThan1~21                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~22                                                            ; |hw1|fDIV27M:inst4|LessThan1~22                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~23                                                            ; |hw1|fDIV27M:inst4|LessThan1~23                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~24                                                            ; |hw1|fDIV27M:inst4|LessThan1~24                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~25                                                            ; |hw1|fDIV27M:inst4|LessThan1~25                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~26                                                            ; |hw1|fDIV27M:inst4|LessThan1~26                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~27                                                            ; |hw1|fDIV27M:inst4|LessThan1~27                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~28                                                            ; |hw1|fDIV27M:inst4|LessThan1~28                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~29                                                            ; |hw1|fDIV27M:inst4|LessThan1~29                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~30                                                            ; |hw1|fDIV27M:inst4|LessThan1~30                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~31                                                            ; |hw1|fDIV27M:inst4|LessThan1~31                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~32                                                            ; |hw1|fDIV27M:inst4|LessThan1~32                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~33                                                            ; |hw1|fDIV27M:inst4|LessThan1~33                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~34                                                            ; |hw1|fDIV27M:inst4|LessThan1~34                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~35                                                            ; |hw1|fDIV27M:inst4|LessThan1~35                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~36                                                            ; |hw1|fDIV27M:inst4|LessThan1~36                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~37                                                            ; |hw1|fDIV27M:inst4|LessThan1~37                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~38                                                            ; |hw1|fDIV27M:inst4|LessThan1~38                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~7                                                                  ; |hw1|fDIV27M:inst4|Add0~7                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~8                                                                  ; |hw1|fDIV27M:inst4|Add0~8                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~9                                                                  ; |hw1|fDIV27M:inst4|Add0~9                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~10                                                                 ; |hw1|fDIV27M:inst4|Add0~10                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~11                                                                 ; |hw1|fDIV27M:inst4|Add0~11                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~12                                                                 ; |hw1|fDIV27M:inst4|Add0~12                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~13                                                                 ; |hw1|fDIV27M:inst4|Add0~13                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~14                                                                 ; |hw1|fDIV27M:inst4|Add0~14                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~15                                                                 ; |hw1|fDIV27M:inst4|Add0~15                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~16                                                                 ; |hw1|fDIV27M:inst4|Add0~16                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~17                                                                 ; |hw1|fDIV27M:inst4|Add0~17                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~18                                                                 ; |hw1|fDIV27M:inst4|Add0~18                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~19                                                                 ; |hw1|fDIV27M:inst4|Add0~19                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~20                                                                 ; |hw1|fDIV27M:inst4|Add0~20                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~21                                                                 ; |hw1|fDIV27M:inst4|Add0~21                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~22                                                                 ; |hw1|fDIV27M:inst4|Add0~22                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~23                                                                 ; |hw1|fDIV27M:inst4|Add0~23                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~24                                                                 ; |hw1|fDIV27M:inst4|Add0~24                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~25                                                                 ; |hw1|fDIV27M:inst4|Add0~25                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~26                                                                 ; |hw1|fDIV27M:inst4|Add0~26                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~27                                                                 ; |hw1|fDIV27M:inst4|Add0~27                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~28                                                                 ; |hw1|fDIV27M:inst4|Add0~28                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~29                                                                 ; |hw1|fDIV27M:inst4|Add0~29                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~30                                                                 ; |hw1|fDIV27M:inst4|Add0~30                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~31                                                                 ; |hw1|fDIV27M:inst4|Add0~31                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~32                                                                 ; |hw1|fDIV27M:inst4|Add0~32                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~33                                                                 ; |hw1|fDIV27M:inst4|Add0~33                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~34                                                                 ; |hw1|fDIV27M:inst4|Add0~34                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~35                                                                 ; |hw1|fDIV27M:inst4|Add0~35                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~36                                                                 ; |hw1|fDIV27M:inst4|Add0~36                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~37                                                                 ; |hw1|fDIV27M:inst4|Add0~37                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~38                                                                 ; |hw1|fDIV27M:inst4|Add0~38                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~39                                                                 ; |hw1|fDIV27M:inst4|Add0~39                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~40                                                                 ; |hw1|fDIV27M:inst4|Add0~40                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~41                                                                 ; |hw1|fDIV27M:inst4|Add0~41                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~42                                                                 ; |hw1|fDIV27M:inst4|Add0~42                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~43                                                                 ; |hw1|fDIV27M:inst4|Add0~43                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~44                                                                 ; |hw1|fDIV27M:inst4|Add0~44                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~45                                                                 ; |hw1|fDIV27M:inst4|Add0~45                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~46                                                                 ; |hw1|fDIV27M:inst4|Add0~46                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~47                                                                 ; |hw1|fDIV27M:inst4|Add0~47                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~48                                                                 ; |hw1|fDIV27M:inst4|Add0~48                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~49                                                                 ; |hw1|fDIV27M:inst4|Add0~49                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~50                                                                 ; |hw1|fDIV27M:inst4|Add0~50                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~51                                                                 ; |hw1|fDIV27M:inst4|Add0~51                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~52                                                                 ; |hw1|fDIV27M:inst4|Add0~52                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~53                                                                 ; |hw1|fDIV27M:inst4|Add0~53                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~54                                                                 ; |hw1|fDIV27M:inst4|Add0~54                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~55                                                                 ; |hw1|fDIV27M:inst4|Add0~55                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~56                                                                 ; |hw1|fDIV27M:inst4|Add0~56                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~57                                                                 ; |hw1|fDIV27M:inst4|Add0~57                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~58                                                                 ; |hw1|fDIV27M:inst4|Add0~58                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~59                                                                 ; |hw1|fDIV27M:inst4|Add0~59                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~60                                                                 ; |hw1|fDIV27M:inst4|Add0~60                                                           ; out0             ;
+; |hw1|AGU:inst3|Add0~1                                                                      ; |hw1|AGU:inst3|Add0~1                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~2                                                                      ; |hw1|AGU:inst3|Add0~2                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~3                                                                      ; |hw1|AGU:inst3|Add0~3                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~4                                                                      ; |hw1|AGU:inst3|Add0~4                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~5                                                                      ; |hw1|AGU:inst3|Add0~5                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~6                                                                      ; |hw1|AGU:inst3|Add0~6                                                                ; out0             ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                  ; Output Port Name                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; |hw1|_7seg1[6]                                                                             ; |hw1|_7seg1[6]                                                                       ; pin_out          ;
+; |hw1|_7seg1[5]                                                                             ; |hw1|_7seg1[5]                                                                       ; pin_out          ;
+; |hw1|_7seg1[4]                                                                             ; |hw1|_7seg1[4]                                                                       ; pin_out          ;
+; |hw1|_7seg1[3]                                                                             ; |hw1|_7seg1[3]                                                                       ; pin_out          ;
+; |hw1|_7seg1[2]                                                                             ; |hw1|_7seg1[2]                                                                       ; pin_out          ;
+; |hw1|_7seg1[1]                                                                             ; |hw1|_7seg1[1]                                                                       ; pin_out          ;
+; |hw1|_7seg1[0]                                                                             ; |hw1|_7seg1[0]                                                                       ; pin_out          ;
+; |hw1|dsw[4]                                                                                ; |hw1|dsw[4]                                                                          ; out              ;
+; |hw1|dsw[3]                                                                                ; |hw1|dsw[3]                                                                          ; out              ;
+; |hw1|dsw[2]                                                                                ; |hw1|dsw[2]                                                                          ; out              ;
+; |hw1|dsw[1]                                                                                ; |hw1|dsw[1]                                                                          ; out              ;
+; |hw1|dsw[0]                                                                                ; |hw1|dsw[0]                                                                          ; out              ;
+; |hw1|_7seg2[6]                                                                             ; |hw1|_7seg2[6]                                                                       ; pin_out          ;
+; |hw1|_7seg2[5]                                                                             ; |hw1|_7seg2[5]                                                                       ; pin_out          ;
+; |hw1|_7seg2[4]                                                                             ; |hw1|_7seg2[4]                                                                       ; pin_out          ;
+; |hw1|_7seg2[3]                                                                             ; |hw1|_7seg2[3]                                                                       ; pin_out          ;
+; |hw1|_7seg2[2]                                                                             ; |hw1|_7seg2[2]                                                                       ; pin_out          ;
+; |hw1|_7seg2[1]                                                                             ; |hw1|_7seg2[1]                                                                       ; pin_out          ;
+; |hw1|_7seg2[0]                                                                             ; |hw1|_7seg2[0]                                                                       ; pin_out          ;
+; |hw1|_7segENC:inst5|WideOr0                                                                ; |hw1|_7segENC:inst5|WideOr0                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr1                                                                ; |hw1|_7segENC:inst5|WideOr1                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr2                                                                ; |hw1|_7segENC:inst5|WideOr2                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr3                                                                ; |hw1|_7segENC:inst5|WideOr3                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr4                                                                ; |hw1|_7segENC:inst5|WideOr4                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr5                                                                ; |hw1|_7segENC:inst5|WideOr5                                                          ; out0             ;
+; |hw1|_7segENC:inst5|WideOr6                                                                ; |hw1|_7segENC:inst5|WideOr6                                                          ; out0             ;
+; |hw1|fDIV27M:inst4|count~0                                                                 ; |hw1|fDIV27M:inst4|count~0                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~1                                                                 ; |hw1|fDIV27M:inst4|count~1                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~2                                                                 ; |hw1|fDIV27M:inst4|count~2                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~3                                                                 ; |hw1|fDIV27M:inst4|count~3                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~4                                                                 ; |hw1|fDIV27M:inst4|count~4                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~5                                                                 ; |hw1|fDIV27M:inst4|count~5                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~6                                                                 ; |hw1|fDIV27M:inst4|count~6                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~7                                                                 ; |hw1|fDIV27M:inst4|count~7                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~8                                                                 ; |hw1|fDIV27M:inst4|count~8                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~9                                                                 ; |hw1|fDIV27M:inst4|count~9                                                           ; out              ;
+; |hw1|fDIV27M:inst4|count~10                                                                ; |hw1|fDIV27M:inst4|count~10                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~11                                                                ; |hw1|fDIV27M:inst4|count~11                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~12                                                                ; |hw1|fDIV27M:inst4|count~12                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~13                                                                ; |hw1|fDIV27M:inst4|count~13                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~14                                                                ; |hw1|fDIV27M:inst4|count~14                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~15                                                                ; |hw1|fDIV27M:inst4|count~15                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~16                                                                ; |hw1|fDIV27M:inst4|count~16                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~17                                                                ; |hw1|fDIV27M:inst4|count~17                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~18                                                                ; |hw1|fDIV27M:inst4|count~18                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~19                                                                ; |hw1|fDIV27M:inst4|count~19                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~20                                                                ; |hw1|fDIV27M:inst4|count~20                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~21                                                                ; |hw1|fDIV27M:inst4|count~21                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~22                                                                ; |hw1|fDIV27M:inst4|count~22                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~23                                                                ; |hw1|fDIV27M:inst4|count~23                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~24                                                                ; |hw1|fDIV27M:inst4|count~24                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~25                                                                ; |hw1|fDIV27M:inst4|count~25                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~26                                                                ; |hw1|fDIV27M:inst4|count~26                                                          ; out              ;
+; |hw1|fDIV27M:inst4|count~27                                                                ; |hw1|fDIV27M:inst4|count~27                                                          ; out              ;
+; |hw1|fDIV27M:inst4|fout                                                                    ; |hw1|fDIV27M:inst4|fout                                                              ; regout           ;
+; |hw1|fDIV27M:inst4|count[4]                                                                ; |hw1|fDIV27M:inst4|count[4]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[5]                                                                ; |hw1|fDIV27M:inst4|count[5]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[6]                                                                ; |hw1|fDIV27M:inst4|count[6]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[7]                                                                ; |hw1|fDIV27M:inst4|count[7]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[8]                                                                ; |hw1|fDIV27M:inst4|count[8]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[9]                                                                ; |hw1|fDIV27M:inst4|count[9]                                                          ; regout           ;
+; |hw1|fDIV27M:inst4|count[10]                                                               ; |hw1|fDIV27M:inst4|count[10]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[11]                                                               ; |hw1|fDIV27M:inst4|count[11]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[12]                                                               ; |hw1|fDIV27M:inst4|count[12]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[13]                                                               ; |hw1|fDIV27M:inst4|count[13]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[14]                                                               ; |hw1|fDIV27M:inst4|count[14]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[15]                                                               ; |hw1|fDIV27M:inst4|count[15]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[16]                                                               ; |hw1|fDIV27M:inst4|count[16]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[17]                                                               ; |hw1|fDIV27M:inst4|count[17]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[18]                                                               ; |hw1|fDIV27M:inst4|count[18]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[19]                                                               ; |hw1|fDIV27M:inst4|count[19]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[20]                                                               ; |hw1|fDIV27M:inst4|count[20]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[21]                                                               ; |hw1|fDIV27M:inst4|count[21]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[22]                                                               ; |hw1|fDIV27M:inst4|count[22]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[23]                                                               ; |hw1|fDIV27M:inst4|count[23]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[24]                                                               ; |hw1|fDIV27M:inst4|count[24]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[25]                                                               ; |hw1|fDIV27M:inst4|count[25]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[26]                                                               ; |hw1|fDIV27M:inst4|count[26]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[27]                                                               ; |hw1|fDIV27M:inst4|count[27]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[28]                                                               ; |hw1|fDIV27M:inst4|count[28]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[29]                                                               ; |hw1|fDIV27M:inst4|count[29]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[30]                                                               ; |hw1|fDIV27M:inst4|count[30]                                                         ; regout           ;
+; |hw1|fDIV27M:inst4|count[31]                                                               ; |hw1|fDIV27M:inst4|count[31]                                                         ; regout           ;
+; |hw1|AGU:inst3|A[1]                                                                        ; |hw1|AGU:inst3|A[1]                                                                  ; regout           ;
+; |hw1|AGU:inst3|A[2]                                                                        ; |hw1|AGU:inst3|A[2]                                                                  ; regout           ;
+; |hw1|AGU:inst3|A[3]                                                                        ; |hw1|AGU:inst3|A[3]                                                                  ; regout           ;
+; |hw1|AGU:inst3|A[4]                                                                        ; |hw1|AGU:inst3|A[4]                                                                  ; regout           ;
+; |hw1|Mux2to1_5:inst1|Y[4]                                                                  ; |hw1|Mux2to1_5:inst1|Y[4]                                                            ; out              ;
+; |hw1|Mux2to1_5:inst1|Y[3]                                                                  ; |hw1|Mux2to1_5:inst1|Y[3]                                                            ; out              ;
+; |hw1|Mux2to1_5:inst1|Y[2]                                                                  ; |hw1|Mux2to1_5:inst1|Y[2]                                                            ; out              ;
+; |hw1|Mux2to1_5:inst1|Y[1]                                                                  ; |hw1|Mux2to1_5:inst1|Y[1]                                                            ; out              ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[0] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[1] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[2] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[3] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[4] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[5] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[6] ; portadataout0    ;
+; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7 ; |hw1|RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|q_a[7] ; portadataout0    ;
+; |hw1|_7segENC:inst2|WideOr0                                                                ; |hw1|_7segENC:inst2|WideOr0                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr1                                                                ; |hw1|_7segENC:inst2|WideOr1                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr2                                                                ; |hw1|_7segENC:inst2|WideOr2                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr3                                                                ; |hw1|_7segENC:inst2|WideOr3                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr4                                                                ; |hw1|_7segENC:inst2|WideOr4                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr5                                                                ; |hw1|_7segENC:inst2|WideOr5                                                          ; out0             ;
+; |hw1|_7segENC:inst2|WideOr6                                                                ; |hw1|_7segENC:inst2|WideOr6                                                          ; out0             ;
+; |hw1|_7segENC:inst5|Decoder0~0                                                             ; |hw1|_7segENC:inst5|Decoder0~0                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~1                                                             ; |hw1|_7segENC:inst5|Decoder0~1                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~2                                                             ; |hw1|_7segENC:inst5|Decoder0~2                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~3                                                             ; |hw1|_7segENC:inst5|Decoder0~3                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~4                                                             ; |hw1|_7segENC:inst5|Decoder0~4                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~5                                                             ; |hw1|_7segENC:inst5|Decoder0~5                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~6                                                             ; |hw1|_7segENC:inst5|Decoder0~6                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~7                                                             ; |hw1|_7segENC:inst5|Decoder0~7                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~8                                                             ; |hw1|_7segENC:inst5|Decoder0~8                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~9                                                             ; |hw1|_7segENC:inst5|Decoder0~9                                                       ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~10                                                            ; |hw1|_7segENC:inst5|Decoder0~10                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~11                                                            ; |hw1|_7segENC:inst5|Decoder0~11                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~12                                                            ; |hw1|_7segENC:inst5|Decoder0~12                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~13                                                            ; |hw1|_7segENC:inst5|Decoder0~13                                                      ; out              ;
+; |hw1|_7segENC:inst5|Decoder0~14                                                            ; |hw1|_7segENC:inst5|Decoder0~14                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~0                                                             ; |hw1|_7segENC:inst2|Decoder0~0                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~1                                                             ; |hw1|_7segENC:inst2|Decoder0~1                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~2                                                             ; |hw1|_7segENC:inst2|Decoder0~2                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~3                                                             ; |hw1|_7segENC:inst2|Decoder0~3                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~4                                                             ; |hw1|_7segENC:inst2|Decoder0~4                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~5                                                             ; |hw1|_7segENC:inst2|Decoder0~5                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~6                                                             ; |hw1|_7segENC:inst2|Decoder0~6                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~7                                                             ; |hw1|_7segENC:inst2|Decoder0~7                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~8                                                             ; |hw1|_7segENC:inst2|Decoder0~8                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~9                                                             ; |hw1|_7segENC:inst2|Decoder0~9                                                       ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~10                                                            ; |hw1|_7segENC:inst2|Decoder0~10                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~11                                                            ; |hw1|_7segENC:inst2|Decoder0~11                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~12                                                            ; |hw1|_7segENC:inst2|Decoder0~12                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~13                                                            ; |hw1|_7segENC:inst2|Decoder0~13                                                      ; out              ;
+; |hw1|_7segENC:inst2|Decoder0~14                                                            ; |hw1|_7segENC:inst2|Decoder0~14                                                      ; out              ;
+; |hw1|fDIV27M:inst4|LessThan0~0                                                             ; |hw1|fDIV27M:inst4|LessThan0~0                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~1                                                             ; |hw1|fDIV27M:inst4|LessThan0~1                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~2                                                             ; |hw1|fDIV27M:inst4|LessThan0~2                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~3                                                             ; |hw1|fDIV27M:inst4|LessThan0~3                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~4                                                             ; |hw1|fDIV27M:inst4|LessThan0~4                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~5                                                             ; |hw1|fDIV27M:inst4|LessThan0~5                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~6                                                             ; |hw1|fDIV27M:inst4|LessThan0~6                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~7                                                             ; |hw1|fDIV27M:inst4|LessThan0~7                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~8                                                             ; |hw1|fDIV27M:inst4|LessThan0~8                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~9                                                             ; |hw1|fDIV27M:inst4|LessThan0~9                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~10                                                            ; |hw1|fDIV27M:inst4|LessThan0~10                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~11                                                            ; |hw1|fDIV27M:inst4|LessThan0~11                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~12                                                            ; |hw1|fDIV27M:inst4|LessThan0~12                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~13                                                            ; |hw1|fDIV27M:inst4|LessThan0~13                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~14                                                            ; |hw1|fDIV27M:inst4|LessThan0~14                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~15                                                            ; |hw1|fDIV27M:inst4|LessThan0~15                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~16                                                            ; |hw1|fDIV27M:inst4|LessThan0~16                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~17                                                            ; |hw1|fDIV27M:inst4|LessThan0~17                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~18                                                            ; |hw1|fDIV27M:inst4|LessThan0~18                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~19                                                            ; |hw1|fDIV27M:inst4|LessThan0~19                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~20                                                            ; |hw1|fDIV27M:inst4|LessThan0~20                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~21                                                            ; |hw1|fDIV27M:inst4|LessThan0~21                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~22                                                            ; |hw1|fDIV27M:inst4|LessThan0~22                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~23                                                            ; |hw1|fDIV27M:inst4|LessThan0~23                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~24                                                            ; |hw1|fDIV27M:inst4|LessThan0~24                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~25                                                            ; |hw1|fDIV27M:inst4|LessThan0~25                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~26                                                            ; |hw1|fDIV27M:inst4|LessThan0~26                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~27                                                            ; |hw1|fDIV27M:inst4|LessThan0~27                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~28                                                            ; |hw1|fDIV27M:inst4|LessThan0~28                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~29                                                            ; |hw1|fDIV27M:inst4|LessThan0~29                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~30                                                            ; |hw1|fDIV27M:inst4|LessThan0~30                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~31                                                            ; |hw1|fDIV27M:inst4|LessThan0~31                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~32                                                            ; |hw1|fDIV27M:inst4|LessThan0~32                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~33                                                            ; |hw1|fDIV27M:inst4|LessThan0~33                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~34                                                            ; |hw1|fDIV27M:inst4|LessThan0~34                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~35                                                            ; |hw1|fDIV27M:inst4|LessThan0~35                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan0~36                                                            ; |hw1|fDIV27M:inst4|LessThan0~36                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~0                                                             ; |hw1|fDIV27M:inst4|LessThan1~0                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~1                                                             ; |hw1|fDIV27M:inst4|LessThan1~1                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~2                                                             ; |hw1|fDIV27M:inst4|LessThan1~2                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~3                                                             ; |hw1|fDIV27M:inst4|LessThan1~3                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~4                                                             ; |hw1|fDIV27M:inst4|LessThan1~4                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~5                                                             ; |hw1|fDIV27M:inst4|LessThan1~5                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~6                                                             ; |hw1|fDIV27M:inst4|LessThan1~6                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~7                                                             ; |hw1|fDIV27M:inst4|LessThan1~7                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~8                                                             ; |hw1|fDIV27M:inst4|LessThan1~8                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~9                                                             ; |hw1|fDIV27M:inst4|LessThan1~9                                                       ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~10                                                            ; |hw1|fDIV27M:inst4|LessThan1~10                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~11                                                            ; |hw1|fDIV27M:inst4|LessThan1~11                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~12                                                            ; |hw1|fDIV27M:inst4|LessThan1~12                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~13                                                            ; |hw1|fDIV27M:inst4|LessThan1~13                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~14                                                            ; |hw1|fDIV27M:inst4|LessThan1~14                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~15                                                            ; |hw1|fDIV27M:inst4|LessThan1~15                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~16                                                            ; |hw1|fDIV27M:inst4|LessThan1~16                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~17                                                            ; |hw1|fDIV27M:inst4|LessThan1~17                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~18                                                            ; |hw1|fDIV27M:inst4|LessThan1~18                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~19                                                            ; |hw1|fDIV27M:inst4|LessThan1~19                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~20                                                            ; |hw1|fDIV27M:inst4|LessThan1~20                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~21                                                            ; |hw1|fDIV27M:inst4|LessThan1~21                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~22                                                            ; |hw1|fDIV27M:inst4|LessThan1~22                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~23                                                            ; |hw1|fDIV27M:inst4|LessThan1~23                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~24                                                            ; |hw1|fDIV27M:inst4|LessThan1~24                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~25                                                            ; |hw1|fDIV27M:inst4|LessThan1~25                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~26                                                            ; |hw1|fDIV27M:inst4|LessThan1~26                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~27                                                            ; |hw1|fDIV27M:inst4|LessThan1~27                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~28                                                            ; |hw1|fDIV27M:inst4|LessThan1~28                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~29                                                            ; |hw1|fDIV27M:inst4|LessThan1~29                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~30                                                            ; |hw1|fDIV27M:inst4|LessThan1~30                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~31                                                            ; |hw1|fDIV27M:inst4|LessThan1~31                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~32                                                            ; |hw1|fDIV27M:inst4|LessThan1~32                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~33                                                            ; |hw1|fDIV27M:inst4|LessThan1~33                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~34                                                            ; |hw1|fDIV27M:inst4|LessThan1~34                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~35                                                            ; |hw1|fDIV27M:inst4|LessThan1~35                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~36                                                            ; |hw1|fDIV27M:inst4|LessThan1~36                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~37                                                            ; |hw1|fDIV27M:inst4|LessThan1~37                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|LessThan1~38                                                            ; |hw1|fDIV27M:inst4|LessThan1~38                                                      ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~6                                                                  ; |hw1|fDIV27M:inst4|Add0~6                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~7                                                                  ; |hw1|fDIV27M:inst4|Add0~7                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~8                                                                  ; |hw1|fDIV27M:inst4|Add0~8                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~9                                                                  ; |hw1|fDIV27M:inst4|Add0~9                                                            ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~10                                                                 ; |hw1|fDIV27M:inst4|Add0~10                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~11                                                                 ; |hw1|fDIV27M:inst4|Add0~11                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~12                                                                 ; |hw1|fDIV27M:inst4|Add0~12                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~13                                                                 ; |hw1|fDIV27M:inst4|Add0~13                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~14                                                                 ; |hw1|fDIV27M:inst4|Add0~14                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~15                                                                 ; |hw1|fDIV27M:inst4|Add0~15                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~16                                                                 ; |hw1|fDIV27M:inst4|Add0~16                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~17                                                                 ; |hw1|fDIV27M:inst4|Add0~17                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~18                                                                 ; |hw1|fDIV27M:inst4|Add0~18                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~19                                                                 ; |hw1|fDIV27M:inst4|Add0~19                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~20                                                                 ; |hw1|fDIV27M:inst4|Add0~20                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~21                                                                 ; |hw1|fDIV27M:inst4|Add0~21                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~22                                                                 ; |hw1|fDIV27M:inst4|Add0~22                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~23                                                                 ; |hw1|fDIV27M:inst4|Add0~23                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~24                                                                 ; |hw1|fDIV27M:inst4|Add0~24                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~25                                                                 ; |hw1|fDIV27M:inst4|Add0~25                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~26                                                                 ; |hw1|fDIV27M:inst4|Add0~26                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~27                                                                 ; |hw1|fDIV27M:inst4|Add0~27                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~28                                                                 ; |hw1|fDIV27M:inst4|Add0~28                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~29                                                                 ; |hw1|fDIV27M:inst4|Add0~29                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~30                                                                 ; |hw1|fDIV27M:inst4|Add0~30                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~31                                                                 ; |hw1|fDIV27M:inst4|Add0~31                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~32                                                                 ; |hw1|fDIV27M:inst4|Add0~32                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~33                                                                 ; |hw1|fDIV27M:inst4|Add0~33                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~34                                                                 ; |hw1|fDIV27M:inst4|Add0~34                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~35                                                                 ; |hw1|fDIV27M:inst4|Add0~35                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~36                                                                 ; |hw1|fDIV27M:inst4|Add0~36                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~37                                                                 ; |hw1|fDIV27M:inst4|Add0~37                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~38                                                                 ; |hw1|fDIV27M:inst4|Add0~38                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~39                                                                 ; |hw1|fDIV27M:inst4|Add0~39                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~40                                                                 ; |hw1|fDIV27M:inst4|Add0~40                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~41                                                                 ; |hw1|fDIV27M:inst4|Add0~41                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~42                                                                 ; |hw1|fDIV27M:inst4|Add0~42                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~43                                                                 ; |hw1|fDIV27M:inst4|Add0~43                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~44                                                                 ; |hw1|fDIV27M:inst4|Add0~44                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~45                                                                 ; |hw1|fDIV27M:inst4|Add0~45                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~46                                                                 ; |hw1|fDIV27M:inst4|Add0~46                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~47                                                                 ; |hw1|fDIV27M:inst4|Add0~47                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~48                                                                 ; |hw1|fDIV27M:inst4|Add0~48                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~49                                                                 ; |hw1|fDIV27M:inst4|Add0~49                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~50                                                                 ; |hw1|fDIV27M:inst4|Add0~50                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~51                                                                 ; |hw1|fDIV27M:inst4|Add0~51                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~52                                                                 ; |hw1|fDIV27M:inst4|Add0~52                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~53                                                                 ; |hw1|fDIV27M:inst4|Add0~53                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~54                                                                 ; |hw1|fDIV27M:inst4|Add0~54                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~55                                                                 ; |hw1|fDIV27M:inst4|Add0~55                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~56                                                                 ; |hw1|fDIV27M:inst4|Add0~56                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~57                                                                 ; |hw1|fDIV27M:inst4|Add0~57                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~58                                                                 ; |hw1|fDIV27M:inst4|Add0~58                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~59                                                                 ; |hw1|fDIV27M:inst4|Add0~59                                                           ; out0             ;
+; |hw1|fDIV27M:inst4|Add0~60                                                                 ; |hw1|fDIV27M:inst4|Add0~60                                                           ; out0             ;
+; |hw1|AGU:inst3|Add0~0                                                                      ; |hw1|AGU:inst3|Add0~0                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~1                                                                      ; |hw1|AGU:inst3|Add0~1                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~2                                                                      ; |hw1|AGU:inst3|Add0~2                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~3                                                                      ; |hw1|AGU:inst3|Add0~3                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~4                                                                      ; |hw1|AGU:inst3|Add0~4                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~5                                                                      ; |hw1|AGU:inst3|Add0~5                                                                ; out0             ;
+; |hw1|AGU:inst3|Add0~6                                                                      ; |hw1|AGU:inst3|Add0~6                                                                ; out0             ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Sep 29 22:18:08 2019
+Info: Command: quartus_sim --simulation_results_format=VWF hw -c hw
+Info (324025): Using vector source file "C:/Users/user/Desktop/EE exp3/hw1/hw.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       5.84 %
+Info (328052): Number of transitions in simulation is 333
+Info (324045): Vector file hw.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4464 megabytes
+    Info: Processing ended: Sun Sep 29 22:18:09 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

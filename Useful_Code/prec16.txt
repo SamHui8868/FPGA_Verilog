@@ -1,0 +1,11 @@
+module prec16(x,y,z);
+input[15:0] x;
+output[3:0] y;
+output z;
+wire c0,c1;
+wire[2:0] m0,m1;
+prec8 v0(x[7:0],m0,c0);
+prec8 v1(x[15:8],m1,c1);
+assign z=c0&c1;
+assign y=(c1)?{1'b0,m0}:{1'b1,m1};
+endmodule

@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'fin'
+Slack : -3.552
+TNS   : -216.779
+
+Type  : Slow 1200mV 85C Model Setup 'oneshot:inst6|cs.01'
+Slack : -2.067
+TNS   : -29.081
+
+Type  : Slow 1200mV 85C Model Setup 'fDIV25K:inst4|fout'
+Slack : -0.376
+TNS   : -1.708
+
+Type  : Slow 1200mV 85C Model Setup 'fDIV50M:inst3|fout'
+Slack : -0.043
+TNS   : -0.074
+
+Type  : Slow 1200mV 85C Model Hold 'fDIV25K:inst4|fout'
+Slack : -0.276
+TNS   : -0.597
+
+Type  : Slow 1200mV 85C Model Hold 'fDIV50M:inst3|fout'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fin'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'oneshot:inst6|cs.01'
+Slack : 1.444
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'fDIV25K:inst4|fout'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'fDIV25K:inst4|fout'
+Slack : -0.121
+TNS   : -0.484
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fin'
+Slack : -3.000
+TNS   : -110.132
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fDIV25K:inst4|fout'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fDIV50M:inst3|fout'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'oneshot:inst6|cs.01'
+Slack : 0.477
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'fin'
+Slack : -3.082
+TNS   : -186.965
+
+Type  : Slow 1200mV 0C Model Setup 'oneshot:inst6|cs.01'
+Slack : -1.843
+TNS   : -25.857
+
+Type  : Slow 1200mV 0C Model Setup 'fDIV25K:inst4|fout'
+Slack : -0.220
+TNS   : -0.660
+
+Type  : Slow 1200mV 0C Model Setup 'fDIV50M:inst3|fout'
+Slack : 0.066
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fDIV25K:inst4|fout'
+Slack : -0.208
+TNS   : -0.366
+
+Type  : Slow 1200mV 0C Model Hold 'fDIV50M:inst3|fout'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fin'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'oneshot:inst6|cs.01'
+Slack : 1.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'fDIV25K:inst4|fout'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'fDIV25K:inst4|fout'
+Slack : -0.121
+TNS   : -0.484
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fin'
+Slack : -3.000
+TNS   : -110.132
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fDIV25K:inst4|fout'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fDIV50M:inst3|fout'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'oneshot:inst6|cs.01'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'fin'
+Slack : -1.541
+TNS   : -80.346
+
+Type  : Fast 1200mV 0C Model Setup 'oneshot:inst6|cs.01'
+Slack : -0.968
+TNS   : -13.082
+
+Type  : Fast 1200mV 0C Model Setup 'fDIV25K:inst4|fout'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'fDIV50M:inst3|fout'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fDIV25K:inst4|fout'
+Slack : -0.214
+TNS   : -0.656
+
+Type  : Fast 1200mV 0C Model Hold 'fDIV50M:inst3|fout'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fin'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'oneshot:inst6|cs.01'
+Slack : 0.976
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'fDIV25K:inst4|fout'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'fDIV25K:inst4|fout'
+Slack : -0.069
+TNS   : -0.276
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fin'
+Slack : -3.000
+TNS   : -93.193
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fDIV25K:inst4|fout'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fDIV50M:inst3|fout'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'oneshot:inst6|cs.01'
+Slack : 0.446
+TNS   : 0.000
+
+------------------------------------------------------------

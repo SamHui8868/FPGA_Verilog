@@ -1,0 +1,7 @@
+module dlatch8(clk,din,dout);
+input[7:0] din;
+input clk;
+output reg[7:0] dout;
+always@(posedge clk)
+dout<=din;
+endmodule

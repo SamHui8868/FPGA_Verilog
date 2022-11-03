@@ -1,0 +1,875 @@
+Classic Timing Analyzer report for hw5
+Mon Nov 11 15:28:42 2019
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk50M'
+  7. Clock Hold: 'clk50M'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                    ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------+---------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                             ; To                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------+---------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 8.840 ns                         ; Dip_select[0]                    ; FDIV:inst2|count[0] ; --         ; clk50M   ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 15.600 ns                        ; serial_out:inst6|store[23]~latch ; D                   ; clk50M     ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 0.131 ns                         ; Dip_select[0]                    ; FDIV:inst2|fout     ; --         ; clk50M   ; 0            ;
+; Clock Setup: 'clk50M'        ; N/A                                      ; None          ; 126.69 MHz ( period = 7.893 ns ) ; FDIV:inst2|count[0]              ; FDIV:inst2|count[0] ; clk50M     ; clk50M   ; 0            ;
+; Clock Hold: 'clk50M'         ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; FDIV:inst2|fout                  ; oneshot:inst5|cs.00 ; clk50M     ; clk50M   ; 282          ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                  ;                     ;            ;          ; 282          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------+---------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk50M          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk50M'                                                                                                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                 ; To                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 126.69 MHz ( period = 7.893 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 128.77 MHz ( period = 7.766 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[31] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[29] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[30] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[21] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[23] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[24] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[22] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[18] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[19] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[20] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[27] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[26] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[28] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[25] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[17] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 131.44 MHz ( period = 7.608 ns )                    ; FDIV:inst2|count[0]  ; FDIV:inst2|count[16] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.392 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 132.71 MHz ( period = 7.535 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.321 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[31] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[29] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[30] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[21] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[23] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[24] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[22] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[18] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[19] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[20] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[27] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[26] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[28] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[25] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[17] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 133.67 MHz ( period = 7.481 ns )                    ; FDIV:inst2|count[1]  ; FDIV:inst2|count[16] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.265 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[31] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[29] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[30] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[21] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[23] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[24] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[22] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[18] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[19] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[20] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[27] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[26] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[28] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[25] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[17] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 137.93 MHz ( period = 7.250 ns )                    ; FDIV:inst2|count[3]  ; FDIV:inst2|count[16] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.034 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 138.35 MHz ( period = 7.228 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 7.014 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.83 MHz ( period = 7.101 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 143.35 MHz ( period = 6.976 ns )                    ; FDIV:inst2|count[4]  ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.762 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[31] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[29] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[30] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[21] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[23] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[24] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[22] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[18] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[19] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[20] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[27] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[26] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[28] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[25] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[17] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 144.03 MHz ( period = 6.943 ns )                    ; FDIV:inst2|count[2]  ; FDIV:inst2|count[16] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 145.94 MHz ( period = 6.852 ns )                    ; FDIV:inst2|count[10] ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.638 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[14] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[15] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[13] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[11] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[12] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[9]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[10] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[8]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[7]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[6]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[5]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[4]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[3]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[1]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[2]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.65 MHz ( period = 6.819 ns )                    ; FDIV:inst2|count[12] ; FDIV:inst2|count[0]  ; clk50M     ; clk50M   ; None                        ; None                      ; 6.605 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[18] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[19] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[20] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[27] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[26] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[28] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[25] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 146.71 MHz ( period = 6.816 ns )                    ; FDIV:inst2|count[11] ; FDIV:inst2|count[17] ; clk50M     ; clk50M   ; None                        ; None                      ; 6.600 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                      ;                      ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clk50M'                                                                                                                                                                                                                                                                                      ;
++------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                                                                                       ; To                                   ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; FDIV:inst2|fout                                                                                            ; oneshot:inst5|cs.00                  ; clk50M     ; clk50M   ; None                       ; None                       ; 1.340 ns                 ;
+; Not operational: Clock Skew > Data Delay ; FDIV:inst2|fout                                                                                            ; oneshot:inst5|cs.01                  ; clk50M     ; clk50M   ; None                       ; None                       ; 1.612 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[2]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[2]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[2]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[2]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[2]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[2]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.689 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[1]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.847 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[1]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.847 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[1]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.847 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[1]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.847 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[1]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.847 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[1]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.847 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[3]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.846 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[3]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.846 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[3]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.846 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[3]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.846 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[3]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.846 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[3]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.846 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[5]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.843 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[5]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.843 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[5]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.843 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[5]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.843 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[5]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.843 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[5]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.843 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[0]            ; clk50M     ; clk50M   ; None                       ; None                       ; 3.873 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[0]            ; clk50M     ; clk50M   ; None                       ; None                       ; 3.873 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[0]            ; clk50M     ; clk50M   ; None                       ; None                       ; 3.873 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[0]            ; clk50M     ; clk50M   ; None                       ; None                       ; 3.873 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[0]            ; clk50M     ; clk50M   ; None                       ; None                       ; 3.873 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[0]            ; clk50M     ; clk50M   ; None                       ; None                       ; 3.873 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[4]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[4]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[4]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[4]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[4]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[4]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 3.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; ctrl:inst4|state.001                                                                                       ; ctrl:inst4|state.010                 ; clk50M     ; clk50M   ; None                       ; None                       ; 0.831 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[14]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.947 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[14]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.947 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[14]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.947 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[14]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.947 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[14]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.947 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[14]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.947 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[16]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.953 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[16]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.953 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[16]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.953 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[16]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.953 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[16]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.953 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[16]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 3.953 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[7]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.062 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[7]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.062 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[7]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.062 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[7]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.062 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[7]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.062 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[7]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.062 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[9]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.090 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[9]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.090 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[9]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.090 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[9]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.090 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[9]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.090 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[9]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.090 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[10]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.127 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[10]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.127 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[10]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.127 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[10]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.127 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[10]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.127 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[10]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.127 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[13]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.104 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[13]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.104 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[13]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.104 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[13]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.104 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[13]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.104 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[13]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.104 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[15]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[15]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[15]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[15]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[15]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[15]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.113 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[6]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[6]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[6]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[6]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[6]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[6]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[8]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.179 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[8]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.179 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[8]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.179 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[8]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.179 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[8]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.179 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[8]~latch      ; clk50M     ; clk50M   ; None                       ; None                       ; 4.179 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; serial_out:inst6|store[21]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; serial_out:inst6|store[21]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; serial_out:inst6|store[21]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; serial_out:inst6|store[21]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; serial_out:inst6|store[21]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; serial_out:inst6|store[21]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.219 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; serial_out:inst6|store[19]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.224 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; serial_out:inst6|store[19]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.224 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; serial_out:inst6|store[19]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.224 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; serial_out:inst6|store[19]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.224 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; serial_out:inst6|store[19]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.224 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; serial_out:inst6|store[19]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.224 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; serial_out:inst6|store[18]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; serial_out:inst6|store[18]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; serial_out:inst6|store[18]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; serial_out:inst6|store[18]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; serial_out:inst6|store[18]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; serial_out:inst6|store[18]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.197 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[17]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.236 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[17]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.236 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[17]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.236 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[17]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.236 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[17]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.236 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[17]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.236 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[12]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.295 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[12]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.295 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[12]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.295 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[12]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.295 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[12]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.295 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[12]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.295 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[11]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.310 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[11]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.310 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[11]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.310 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[11]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.310 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[11]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.310 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[11]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.310 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; serial_out:inst6|store[23]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.369 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; serial_out:inst6|store[23]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.369 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; serial_out:inst6|store[23]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.369 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; serial_out:inst6|store[23]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.369 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; serial_out:inst6|store[23]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.369 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; serial_out:inst6|store[23]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.369 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; serial_out:inst6|store[22]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; serial_out:inst6|store[22]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; serial_out:inst6|store[22]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; serial_out:inst6|store[22]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; serial_out:inst6|store[22]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; serial_out:inst6|store[22]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; serial_out:inst6|store[20]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.410 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; serial_out:inst6|store[20]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.410 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; serial_out:inst6|store[20]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.410 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; serial_out:inst6|store[20]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.410 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; serial_out:inst6|store[20]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.410 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; serial_out:inst6|store[20]~latch     ; clk50M     ; clk50M   ; None                       ; None                       ; 4.410 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[3]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[3]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[3]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[3]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[3]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[3]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[2]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.334 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[2]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.334 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[2]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.334 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[2]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.334 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[2]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.334 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[2]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.334 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[4]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.337 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[4]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.337 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[4]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.337 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[4]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.337 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[4]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.337 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[4]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.337 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[8]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.411 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[8]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.411 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[8]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.411 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[8]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.411 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[8]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.411 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[8]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.411 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[15]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[15]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[15]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[15]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[15]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[15]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.440 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[5]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[5]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[5]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[5]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[5]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[5]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[6]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.515 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[6]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.515 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[6]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.515 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[6]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.515 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[6]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.515 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[6]~_emulated  ; clk50M     ; clk50M   ; None                       ; None                       ; 4.515 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[16]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[16]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[16]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[16]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[16]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; serial_out:inst6|store[16]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.599 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg0  ; serial_out:inst6|store[12]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.614 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg1  ; serial_out:inst6|store[12]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.614 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg2  ; serial_out:inst6|store[12]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.614 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg3  ; serial_out:inst6|store[12]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.614 ns                 ;
+; Not operational: Clock Skew > Data Delay ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg4  ; serial_out:inst6|store[12]~_emulated ; clk50M     ; clk50M   ; None                       ; None                       ; 4.614 ns                 ;
+; Timing analysis restricted to 200 rows.  ; To change the limit use Settings (Assignments menu)                                                        ;                                      ;            ;          ;                            ;                            ;                          ;
++------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                       ;
++-------+--------------+------------+---------------+------------------------------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From          ; To                                                                                                         ; To Clock ;
++-------+--------------+------------+---------------+------------------------------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[14]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[15]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[13]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[11]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[12]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[9]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[10]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[8]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[7]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[6]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[5]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[4]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[3]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[1]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[2]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.840 ns   ; Dip_select[0] ; FDIV:inst2|count[0]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[14]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[15]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[13]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[11]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[12]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[9]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[10]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[8]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[7]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[6]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[5]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[4]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[3]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[1]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[2]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.745 ns   ; Dip_select[1] ; FDIV:inst2|count[0]                                                                                        ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[31]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[29]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[30]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[21]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[23]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[24]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[22]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[18]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[19]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[20]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[27]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[26]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[28]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[25]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[17]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.555 ns   ; Dip_select[0] ; FDIV:inst2|count[16]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[31]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[29]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[30]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[21]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[23]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[24]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[22]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[18]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[19]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[20]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[27]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[26]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[28]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[25]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[17]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 8.460 ns   ; Dip_select[1] ; FDIV:inst2|count[16]                                                                                       ; clk50M   ;
+; N/A   ; None         ; 4.161 ns   ; select        ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; clk50M   ;
+; N/A   ; None         ; 4.161 ns   ; select        ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; clk50M   ;
+; N/A   ; None         ; 2.560 ns   ; Dip_select[0] ; FDIV:inst2|fout                                                                                            ; clk50M   ;
+; N/A   ; None         ; 1.853 ns   ; Dip_select[1] ; FDIV:inst2|fout                                                                                            ; clk50M   ;
++-------+--------------+------------+---------------+------------------------------------------------------------------------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                               ;
++-------+--------------+------------+------------------------------------------------------------------------------------------------------------+-----+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                                       ; To  ; From Clock ;
++-------+--------------+------------+------------------------------------------------------------------------------------------------------------+-----+------------+
+; N/A   ; None         ; 15.600 ns  ; serial_out:inst6|store[23]~latch                                                                           ; D   ; clk50M     ;
+; N/A   ; None         ; 15.490 ns  ; serial_out:inst6|store[23]~_emulated                                                                       ; D   ; clk50M     ;
+; N/A   ; None         ; 14.674 ns  ; ctrl:inst4|state.001                                                                                       ; D   ; clk50M     ;
+; N/A   ; None         ; 14.410 ns  ; ctrl:inst4|count[4]                                                                                        ; str ; clk50M     ;
+; N/A   ; None         ; 14.322 ns  ; ctrl:inst4|count[3]                                                                                        ; str ; clk50M     ;
+; N/A   ; None         ; 14.280 ns  ; ctrl:inst4|count[2]                                                                                        ; str ; clk50M     ;
+; N/A   ; None         ; 14.054 ns  ; ctrl:inst4|count[1]                                                                                        ; str ; clk50M     ;
+; N/A   ; None         ; 13.930 ns  ; ctrl:inst4|count[0]                                                                                        ; str ; clk50M     ;
+; N/A   ; None         ; 13.041 ns  ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg0 ; D   ; clk50M     ;
+; N/A   ; None         ; 13.041 ns  ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg1 ; D   ; clk50M     ;
+; N/A   ; None         ; 13.041 ns  ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg2 ; D   ; clk50M     ;
+; N/A   ; None         ; 13.041 ns  ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg3 ; D   ; clk50M     ;
+; N/A   ; None         ; 13.041 ns  ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg4 ; D   ; clk50M     ;
+; N/A   ; None         ; 13.041 ns  ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; D   ; clk50M     ;
+; N/A   ; None         ; 9.169 ns   ; FDIV25K:inst3|fout                                                                                         ; CP  ; clk50M     ;
++-------+--------------+------------+------------------------------------------------------------------------------------------------------------+-----+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                              ;
++---------------+-------------+-----------+---------------+------------------------------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From          ; To                                                                                                         ; To Clock ;
++---------------+-------------+-----------+---------------+------------------------------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; 0.131 ns  ; Dip_select[0] ; FDIV:inst2|fout                                                                                            ; clk50M   ;
+; N/A           ; None        ; -0.371 ns ; Dip_select[1] ; FDIV:inst2|fout                                                                                            ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[31]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[29]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[30]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[21]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[23]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[24]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[22]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[18]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[19]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[20]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[27]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[26]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[28]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[25]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[17]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -2.905 ns ; Dip_select[1] ; FDIV:inst2|count[16]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[31]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[29]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[30]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[21]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[23]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[24]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[22]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[18]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[19]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[20]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[27]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[26]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[28]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[25]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[17]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.080 ns ; Dip_select[0] ; FDIV:inst2|count[16]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[14]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[15]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[13]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[11]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[12]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[9]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[10]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[8]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[7]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[6]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[5]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[4]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[3]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[1]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[2]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.190 ns ; Dip_select[1] ; FDIV:inst2|count[0]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[14]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[15]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[13]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[11]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[12]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[9]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[10]                                                                                       ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[8]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[7]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[6]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[5]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[4]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[3]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[1]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[2]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.365 ns ; Dip_select[0] ; FDIV:inst2|count[0]                                                                                        ; clk50M   ;
+; N/A           ; None        ; -3.892 ns ; select        ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a18~porta_address_reg5 ; clk50M   ;
+; N/A           ; None        ; -3.892 ns ; select        ; LED:inst13|altsyncram:altsyncram_component|altsyncram_pkc1:auto_generated|ram_block1a0~porta_address_reg5  ; clk50M   ;
++---------------+-------------+-----------+---------------+------------------------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 11 15:28:42 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off hw5 -c hw5 --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "serial_out:inst6|store[23]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[22]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[21]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[20]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[19]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[18]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[17]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[16]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[15]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[14]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[13]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[12]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[11]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[10]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[9]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[8]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[7]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[6]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[5]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[4]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[3]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[2]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[1]~latch" is a latch
+    Warning: Node "serial_out:inst6|store[0]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk50M" is an undefined clock
+Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "FDIV:inst2|fout" as buffer
+    Info: Detected ripple clock "ctrl:inst4|state.001" as buffer
+    Info: Detected ripple clock "FDIV25K:inst3|fout" as buffer
+Info: Clock "clk50M" has Internal fmax of 126.69 MHz between source register "FDIV:inst2|count[0]" and destination register "FDIV:inst2|count[14]" (period= 7.893 ns)
+    Info: + Longest register to register delay is 7.679 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X48_Y34_N1; Fanout = 3; REG Node = 'FDIV:inst2|count[0]'
+        Info: 2: + IC(0.524 ns) + CELL(0.275 ns) = 0.799 ns; Loc. = LCCOMB_X47_Y34_N16; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~20'
+        Info: 3: + IC(0.259 ns) + CELL(0.275 ns) = 1.333 ns; Loc. = LCCOMB_X47_Y34_N2; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~21'
+        Info: 4: + IC(0.246 ns) + CELL(0.150 ns) = 1.729 ns; Loc. = LCCOMB_X47_Y34_N20; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~22'
+        Info: 5: + IC(0.255 ns) + CELL(0.275 ns) = 2.259 ns; Loc. = LCCOMB_X47_Y34_N22; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~23'
+        Info: 6: + IC(0.245 ns) + CELL(0.150 ns) = 2.654 ns; Loc. = LCCOMB_X47_Y34_N0; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~24'
+        Info: 7: + IC(0.248 ns) + CELL(0.150 ns) = 3.052 ns; Loc. = LCCOMB_X47_Y34_N10; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~25'
+        Info: 8: + IC(0.246 ns) + CELL(0.150 ns) = 3.448 ns; Loc. = LCCOMB_X47_Y34_N12; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~26'
+        Info: 9: + IC(0.247 ns) + CELL(0.150 ns) = 3.845 ns; Loc. = LCCOMB_X47_Y34_N6; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~27'
+        Info: 10: + IC(0.248 ns) + CELL(0.150 ns) = 4.243 ns; Loc. = LCCOMB_X47_Y34_N28; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~37'
+        Info: 11: + IC(0.243 ns) + CELL(0.150 ns) = 4.636 ns; Loc. = LCCOMB_X47_Y34_N30; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~38'
+        Info: 12: + IC(0.243 ns) + CELL(0.150 ns) = 5.029 ns; Loc. = LCCOMB_X47_Y34_N8; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~30'
+        Info: 13: + IC(0.248 ns) + CELL(0.275 ns) = 5.552 ns; Loc. = LCCOMB_X47_Y34_N26; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~35'
+        Info: 14: + IC(0.761 ns) + CELL(0.150 ns) = 6.463 ns; Loc. = LCCOMB_X48_Y32_N0; Fanout = 32; COMB Node = 'FDIV:inst2|LessThan0~36'
+        Info: 15: + IC(0.706 ns) + CELL(0.510 ns) = 7.679 ns; Loc. = LCFF_X48_Y34_N29; Fanout = 5; REG Node = 'FDIV:inst2|count[14]'
+        Info: Total cell delay = 2.960 ns ( 38.55 % )
+        Info: Total interconnect delay = 4.719 ns ( 61.45 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk50M" to destination register is 2.685 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 124; COMB Node = 'clk50M~clkctrl'
+            Info: 3: + IC(1.031 ns) + CELL(0.537 ns) = 2.685 ns; Loc. = LCFF_X48_Y34_N29; Fanout = 5; REG Node = 'FDIV:inst2|count[14]'
+            Info: Total cell delay = 1.536 ns ( 57.21 % )
+            Info: Total interconnect delay = 1.149 ns ( 42.79 % )
+        Info: - Longest clock path from clock "clk50M" to source register is 2.685 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 124; COMB Node = 'clk50M~clkctrl'
+            Info: 3: + IC(1.031 ns) + CELL(0.537 ns) = 2.685 ns; Loc. = LCFF_X48_Y34_N1; Fanout = 3; REG Node = 'FDIV:inst2|count[0]'
+            Info: Total cell delay = 1.536 ns ( 57.21 % )
+            Info: Total interconnect delay = 1.149 ns ( 42.79 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Warning: Circuit may not operate. Detected 201 non-operational path(s) clocked by clock "clk50M" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "FDIV:inst2|fout" and destination pin or register "oneshot:inst5|cs.00" for clock "clk50M" (Hold time is 3.409 ns)
+    Info: + Largest clock skew is 4.733 ns
+        Info: + Longest clock path from clock "clk50M" to destination register is 8.496 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+            Info: 2: + IC(1.687 ns) + CELL(0.787 ns) = 3.473 ns; Loc. = LCFF_X24_Y28_N23; Fanout = 3; REG Node = 'FDIV25K:inst3|fout'
+            Info: 3: + IC(3.494 ns) + CELL(0.000 ns) = 6.967 ns; Loc. = CLKCTRL_G8; Fanout = 33; COMB Node = 'FDIV25K:inst3|fout~clkctrl'
+            Info: 4: + IC(0.992 ns) + CELL(0.537 ns) = 8.496 ns; Loc. = LCFF_X49_Y26_N1; Fanout = 1; REG Node = 'oneshot:inst5|cs.00'
+            Info: Total cell delay = 2.323 ns ( 27.34 % )
+            Info: Total interconnect delay = 6.173 ns ( 72.66 % )
+        Info: - Shortest clock path from clock "clk50M" to source register is 3.763 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+            Info: 2: + IC(2.227 ns) + CELL(0.537 ns) = 3.763 ns; Loc. = LCFF_X48_Y32_N11; Fanout = 3; REG Node = 'FDIV:inst2|fout'
+            Info: Total cell delay = 1.536 ns ( 40.82 % )
+            Info: Total interconnect delay = 2.227 ns ( 59.18 % )
+    Info: - Micro clock to output delay of source is 0.250 ns
+    Info: - Shortest register to register delay is 1.340 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X48_Y32_N11; Fanout = 3; REG Node = 'FDIV:inst2|fout'
+        Info: 2: + IC(1.107 ns) + CELL(0.149 ns) = 1.256 ns; Loc. = LCCOMB_X49_Y26_N0; Fanout = 1; COMB Node = 'oneshot:inst5|Selector0~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 1.340 ns; Loc. = LCFF_X49_Y26_N1; Fanout = 1; REG Node = 'oneshot:inst5|cs.00'
+        Info: Total cell delay = 0.233 ns ( 17.39 % )
+        Info: Total interconnect delay = 1.107 ns ( 82.61 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+Info: tsu for register "FDIV:inst2|count[14]" (data pin = "Dip_select[0]", clock pin = "clk50M") is 8.840 ns
+    Info: + Longest pin to register delay is 11.561 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N25; Fanout = 40; PIN Node = 'Dip_select[0]'
+        Info: 2: + IC(1.756 ns) + CELL(0.393 ns) = 3.148 ns; Loc. = LCCOMB_X49_Y34_N10; Fanout = 1; COMB Node = 'FDIV:inst2|Add0~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 3.219 ns; Loc. = LCCOMB_X49_Y34_N12; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.159 ns) = 3.378 ns; Loc. = LCCOMB_X49_Y34_N14; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 3.449 ns; Loc. = LCCOMB_X49_Y34_N16; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 3.520 ns; Loc. = LCCOMB_X49_Y34_N18; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~9'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 3.591 ns; Loc. = LCCOMB_X49_Y34_N20; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~11'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 3.662 ns; Loc. = LCCOMB_X49_Y34_N22; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~13'
+        Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 3.733 ns; Loc. = LCCOMB_X49_Y34_N24; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~15'
+        Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 3.804 ns; Loc. = LCCOMB_X49_Y34_N26; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~17'
+        Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 3.875 ns; Loc. = LCCOMB_X49_Y34_N28; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~19'
+        Info: 12: + IC(0.000 ns) + CELL(0.146 ns) = 4.021 ns; Loc. = LCCOMB_X49_Y34_N30; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~21'
+        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 4.092 ns; Loc. = LCCOMB_X49_Y33_N0; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~23'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 4.163 ns; Loc. = LCCOMB_X49_Y33_N2; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~25'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 4.234 ns; Loc. = LCCOMB_X49_Y33_N4; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~27'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 4.305 ns; Loc. = LCCOMB_X49_Y33_N6; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~29'
+        Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 4.376 ns; Loc. = LCCOMB_X49_Y33_N8; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~31'
+        Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 4.447 ns; Loc. = LCCOMB_X49_Y33_N10; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~33'
+        Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 4.518 ns; Loc. = LCCOMB_X49_Y33_N12; Fanout = 2; COMB Node = 'FDIV:inst2|Add0~35'
+        Info: 20: + IC(0.000 ns) + CELL(0.410 ns) = 4.928 ns; Loc. = LCCOMB_X49_Y33_N14; Fanout = 3; COMB Node = 'FDIV:inst2|Add0~36'
+        Info: 21: + IC(0.692 ns) + CELL(0.438 ns) = 6.058 ns; Loc. = LCCOMB_X47_Y33_N28; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~10'
+        Info: 22: + IC(0.437 ns) + CELL(0.275 ns) = 6.770 ns; Loc. = LCCOMB_X47_Y33_N14; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~11'
+        Info: 23: + IC(0.249 ns) + CELL(0.419 ns) = 7.438 ns; Loc. = LCCOMB_X47_Y33_N24; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~12'
+        Info: 24: + IC(0.253 ns) + CELL(0.242 ns) = 7.933 ns; Loc. = LCCOMB_X47_Y33_N10; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~13'
+        Info: 25: + IC(0.703 ns) + CELL(0.275 ns) = 8.911 ns; Loc. = LCCOMB_X47_Y34_N8; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~30'
+        Info: 26: + IC(0.248 ns) + CELL(0.275 ns) = 9.434 ns; Loc. = LCCOMB_X47_Y34_N26; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan0~35'
+        Info: 27: + IC(0.761 ns) + CELL(0.150 ns) = 10.345 ns; Loc. = LCCOMB_X48_Y32_N0; Fanout = 32; COMB Node = 'FDIV:inst2|LessThan0~36'
+        Info: 28: + IC(0.706 ns) + CELL(0.510 ns) = 11.561 ns; Loc. = LCFF_X48_Y34_N29; Fanout = 5; REG Node = 'FDIV:inst2|count[14]'
+        Info: Total cell delay = 5.756 ns ( 49.79 % )
+        Info: Total interconnect delay = 5.805 ns ( 50.21 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clk50M" to destination register is 2.685 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 124; COMB Node = 'clk50M~clkctrl'
+        Info: 3: + IC(1.031 ns) + CELL(0.537 ns) = 2.685 ns; Loc. = LCFF_X48_Y34_N29; Fanout = 5; REG Node = 'FDIV:inst2|count[14]'
+        Info: Total cell delay = 1.536 ns ( 57.21 % )
+        Info: Total interconnect delay = 1.149 ns ( 42.79 % )
+Info: tco from clock "clk50M" to destination pin "D" through register "serial_out:inst6|store[23]~latch" is 15.600 ns
+    Info: + Longest clock path from clock "clk50M" to source register is 9.072 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+        Info: 2: + IC(1.687 ns) + CELL(0.787 ns) = 3.473 ns; Loc. = LCFF_X24_Y28_N23; Fanout = 3; REG Node = 'FDIV25K:inst3|fout'
+        Info: 3: + IC(1.484 ns) + CELL(0.787 ns) = 5.744 ns; Loc. = LCFF_X49_Y26_N19; Fanout = 25; REG Node = 'ctrl:inst4|state.001'
+        Info: 4: + IC(1.771 ns) + CELL(0.000 ns) = 7.515 ns; Loc. = CLKCTRL_G5; Fanout = 47; COMB Node = 'ctrl:inst4|state.001~clkctrl'
+        Info: 5: + IC(1.407 ns) + CELL(0.150 ns) = 9.072 ns; Loc. = LCCOMB_X25_Y17_N14; Fanout = 2; REG Node = 'serial_out:inst6|store[23]~latch'
+        Info: Total cell delay = 2.723 ns ( 30.02 % )
+        Info: Total interconnect delay = 6.349 ns ( 69.98 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 6.528 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X25_Y17_N14; Fanout = 2; REG Node = 'serial_out:inst6|store[23]~latch'
+        Info: 2: + IC(0.271 ns) + CELL(0.275 ns) = 0.546 ns; Loc. = LCCOMB_X25_Y17_N26; Fanout = 1; COMB Node = 'serial_out:inst6|store[23]~head_lut'
+        Info: 3: + IC(3.360 ns) + CELL(2.622 ns) = 6.528 ns; Loc. = PIN_M22; Fanout = 0; PIN Node = 'D'
+        Info: Total cell delay = 2.897 ns ( 44.38 % )
+        Info: Total interconnect delay = 3.631 ns ( 55.62 % )
+Info: th for register "FDIV:inst2|fout" (data pin = "Dip_select[0]", clock pin = "clk50M") is 0.131 ns
+    Info: + Longest clock path from clock "clk50M" to destination register is 3.763 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 3; CLK Node = 'clk50M'
+        Info: 2: + IC(2.227 ns) + CELL(0.537 ns) = 3.763 ns; Loc. = LCFF_X48_Y32_N11; Fanout = 3; REG Node = 'FDIV:inst2|fout'
+        Info: Total cell delay = 1.536 ns ( 40.82 % )
+        Info: Total interconnect delay = 2.227 ns ( 59.18 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 3.898 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N25; Fanout = 40; PIN Node = 'Dip_select[0]'
+        Info: 2: + IC(1.608 ns) + CELL(0.413 ns) = 3.020 ns; Loc. = LCCOMB_X48_Y32_N12; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan1~5'
+        Info: 3: + IC(0.244 ns) + CELL(0.150 ns) = 3.414 ns; Loc. = LCCOMB_X48_Y32_N18; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan1~20'
+        Info: 4: + IC(0.250 ns) + CELL(0.150 ns) = 3.814 ns; Loc. = LCCOMB_X48_Y32_N10; Fanout = 1; COMB Node = 'FDIV:inst2|LessThan1~34'
+        Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 3.898 ns; Loc. = LCFF_X48_Y32_N11; Fanout = 3; REG Node = 'FDIV:inst2|fout'
+        Info: Total cell delay = 1.796 ns ( 46.07 % )
+        Info: Total interconnect delay = 2.102 ns ( 53.93 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 204 megabytes
+    Info: Processing ended: Mon Nov 11 15:28:42 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

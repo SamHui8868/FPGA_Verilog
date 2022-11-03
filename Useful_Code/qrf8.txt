@@ -1,0 +1,154 @@
+module qrf8(din,sw,wr,addr,d0,d1,d2);
+input[7:0] din;
+input[2:0] addr;
+input wr,sw;
+output[7:0] d0,d1,d2;
+reg[7:0]dout;
+wire[7:0] le,q[7:0],d[6:0];
+
+wire[3:0] b0,b1,b2;
+bdec v0(addr,wr,le);
+
+assign d[0]=(sw)?din:q[0];
+assign d[1]=(sw)?din:q[1];
+assign d[2]=(sw)?din:q[2];
+assign d[3]=(sw)?din:q[3];
+assign d[4]=(sw)?din:q[4];
+assign d[5]=(sw)?din:q[5];
+assign d[6]=(sw)?din:q[6];
+
+dlatch8 v1(le[0]||sw,din,q[0]); 
+dlatch8 v2(le[1]||sw,d[0],q[1]); 
+dlatch8 v3(le[2]||sw,d[1],q[2]); 
+dlatch8 v4(le[3]||sw,d[2],q[3]); 
+dlatch8 v5(le[4]||sw,d[3],q[4]); 
+dlatch8 v6(le[5]||sw,d[4],q[5]); 
+dlatch8 v7(le[6]||sw,d[5],q[6]); 
+dlatch8 v8(le[7]||sw,d[6],q[7]); 
+
+always@(addr or sw)
+case({addr[2]||sw,addr[1]||sw,addr[0]||sw})
+3'd0:dout<=q[0];
+3'd1:dout<=q[1];
+3'd2:dout<=q[2];
+3'd3:dout<=q[3];
+3'd4:dout<=q[4];
+3'd5:dout<=q[5];
+3'd6:dout<=q[6];
+3'd7:dout<=q[7];
+endcase
+
+code_to_bcd v9(dout,b0,b1,b2);
+_7seg v10(b0,d0);
+_7seg v11(b1,d1);
+_7seg v12(b2,d2);
+endmodule
+
+module code_to_bcd(a,b0,b1,b2);
+input[7:0] a;
+output[3:0] b0,b1,b2;
+wire [3:0] w0,s0,s1,s10,s11,s20,s21,s30,s31;
+wire[7:0] con4,con5,con6;
+wire[11:0] con7;
+wire c6,w1,w2,w3,w4,w5,w6,w7,w8,w9;
+
+add6 v0(a[3:0],w0,c6);
+assign s0=(c6)?w0:a[3:0];
+assign s1={3'd0,c6};
+
+assign con4=(a[4])?8'b00010110:8'b00000000;
+assign con5=(a[5])?8'b00110010:8'b00000000;
+assign con6=(a[6])?8'b01100100:8'b00000000;
+assign con7=(a[7])?12'b000100101000:12'b000000000000;
+
+addbcd v40(s0,con4[3:0],0,s10,w1);
+addbcd v41(s1,con4[7:4],w1,s11,w2);
+
+addbcd v50(s10,con5[3:0],0,s20,w3);
+addbcd v51(s11,con5[7:4],w3,s21,w4);
+
+addbcd v60(s20,con6[3:0],0,s30,w5);
+addbcd v61(s21,con6[7:4],w5,s31,w6);
+
+addbcd v70(s30,con7[3:0],0,b0,w7);
+addbcd v71(s31,con7[7:4],w7,b1,w8);
+addbcd v72({3'd0,w6},con7[11:8],w8,b2,w9);
+endmodule
+
+module addbcd(a,b,cin,s,cout);
+input [3:0] a,b;
+input cin;
+output cout;
+output[3:0] s;
+wire[3:0] w0,w1;
+wire c0,c1;
+cadd4 v0(a,b,cin,w0,c0);
+add6 v1(w0,w1,c1);
+assign cout=c0|c1;
+assign s=(cout)?w1:w0;
+endmodule
+
+module cadd4(A,B,Cin,S,Cout);
+input[3:0] A,B;
+input Cin;
+output[3:0] S;
+output Cout;
+wire[3:0] p,q;
+wire c1,c2,c3;
+assign p[0]=A[0]|B[0];
+assign p[1]=A[1]|B[1];
+assign p[2]=A[2]|B[2];
+assign p[3]=A[3]|B[3];
+assign q[0]=A[0]&B[0];
+assign q[1]=A[1]&B[1];
+assign q[2]=A[2]&B[2];
+assign q[3]=A[3]&B[3];
+assign c1=q[0]|(p[0]&Cin);
+assign c2=q[1]|(p[1]&q[0])|(p[1]&p[0]&Cin);
+assign c3=q[2]|(p[2]&q[1])|(p[2]&p[1]&q[0])|(p[2]&p[1]&p[0]&Cin);
+assign Cout=q[3]|(p[3]&q[2])|(p[3]&p[2]&q[1])|(p[3]&p[2]&p[1]&q[0])|(p[3]&p[2]&p[1]&p[0]&Cin);
+assign S[0]=A[0]^B[0]^Cin;
+assign S[1]=A[1]^B[1]^c1;
+assign S[2]=A[2]^B[2]^c2;
+assign S[3]=A[3]^B[3]^c3;
+endmodule
+
+module add6(a,s,cout);
+input [3:0] a;
+output [3:0] s;
+output cout;
+assign s[0]=a[0];
+assign s[1]=~a[1];
+assign s[2]=a[1]^~a[2];
+assign cout=(a[1]|a[2])&a[3];
+assign s[3]=(a[1]|a[2])^a[3];
+endmodule
+
+module _7seg(a,f);
+input[3:0] a;
+output[7:0] f;
+reg[7:0] f;
+always @(a)
+case(a)
+4'd0:f=8'b01000000;
+4'd1:f=8'b01111001;
+4'd2:f=8'b00100100;
+4'd3:f=8'b00110000;
+4'd4:f=8'b00011001;
+4'd5:f=8'b00010010;
+4'd6:f=8'b00000010;
+4'd7:f=8'b01111000;
+4'd8:f=8'b00000000;
+4'd9:f=8'b00011000;
+4'd10:f=8'b00001000;
+4'd11:f=8'b00000011;
+4'd12:f=8'b00100111;
+4'd13:f=8'b00100001;
+4'd14:f=8'b00000110;
+4'd15:f=8'b00001110;
+default f=8'b10000000;
+endcase
+endmodule
+
+
+

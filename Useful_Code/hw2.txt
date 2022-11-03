@@ -1,0 +1,10 @@
+module hw2(a,b,cin,f2,f1,cout);
+input[7:0] a,b;
+input cin;
+output[7:0] f2,f1;
+output cout;
+wire[7:0] s;
+addsub8 v1(a,b,cin,s,cout);
+_7seg v2(s[3:0],f1);
+_7seg v3(s[7:4],f2);
+endmodule

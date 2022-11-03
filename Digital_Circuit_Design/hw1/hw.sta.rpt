@@ -1,0 +1,1378 @@
+TimeQuest Timing Analyzer report for hw
+Sun Sep 29 22:15:00 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'f'
+ 12. Slow Model Setup: 'fDIV27M:inst4|fout'
+ 13. Slow Model Hold: 'fDIV27M:inst4|fout'
+ 14. Slow Model Hold: 'f'
+ 15. Slow Model Minimum Pulse Width: 'f'
+ 16. Slow Model Minimum Pulse Width: 'fDIV27M:inst4|fout'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'f'
+ 27. Fast Model Setup: 'fDIV27M:inst4|fout'
+ 28. Fast Model Hold: 'fDIV27M:inst4|fout'
+ 29. Fast Model Hold: 'f'
+ 30. Fast Model Minimum Pulse Width: 'f'
+ 31. Fast Model Minimum Pulse Width: 'fDIV27M:inst4|fout'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; hw                                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                 ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; Clock Name         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; f                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { f }                  ;
+; fDIV27M:inst4|fout ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fDIV27M:inst4|fout } ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name         ; Note                                                  ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+; 179.15 MHz ; 179.15 MHz      ; f                  ;                                                       ;
+; 596.66 MHz ; 500.0 MHz       ; fDIV27M:inst4|fout ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+--------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------+
+; Slow Model Setup Summary                    ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; f                  ; -2.780 ; -103.432      ;
+; fDIV27M:inst4|fout ; -0.676 ; -1.786        ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------+
+; Slow Model Hold Summary                    ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; fDIV27M:inst4|fout ; 0.391 ; 0.000         ;
+; f                  ; 0.531 ; 0.000         ;
++--------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------+
+; Slow Model Minimum Pulse Width Summary      ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; f                  ; -2.000 ; -118.380      ;
+; fDIV27M:inst4|fout ; -0.500 ; -5.000        ;
++--------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'f'                                                                                                            ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -2.780 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.002      ; 3.818      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[16] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[17] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[18] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[19] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[21] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[22] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[23] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[24] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[25] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[26] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[27] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[28] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[29] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.762 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[20] ; f            ; f           ; 1.000        ; 0.002      ; 3.800      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[16] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[17] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[18] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[19] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[21] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[22] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[23] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[24] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[25] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[26] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[27] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[28] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[29] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.747 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[20] ; f            ; f           ; 1.000        ; 0.000      ; 3.783      ;
+; -2.719 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.002      ; 3.757      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[16] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[17] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[18] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[19] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[21] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[22] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[23] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[24] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[25] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[26] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[27] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[28] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[29] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.714 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[20] ; f            ; f           ; 1.000        ; 0.000      ; 3.750      ;
+; -2.709 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.002      ; 3.747      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[16] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[17] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[18] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[19] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[21] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[22] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[23] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[24] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[25] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[26] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[27] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[28] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[29] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.702 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[20] ; f            ; f           ; 1.000        ; 0.000      ; 3.738      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[16] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[17] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[18] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[19] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[21] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[22] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[23] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[24] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[25] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[26] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[27] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[28] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[29] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.691 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[20] ; f            ; f           ; 1.000        ; 0.002      ; 3.729      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[16] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[17] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[18] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[19] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[21] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[22] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[23] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[24] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[25] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[26] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[27] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[28] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[29] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[30] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.650 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[20] ; f            ; f           ; 1.000        ; 0.002      ; 3.688      ;
+; -2.649 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[31] ; f            ; f           ; 1.000        ; 0.002      ; 3.687      ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'fDIV27M:inst4|fout'                                                                                      ;
++--------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node        ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; -0.676 ; AGU:inst3|A[1] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.712      ;
+; -0.642 ; AGU:inst3|A[0] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.678      ;
+; -0.605 ; AGU:inst3|A[1] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.641      ;
+; -0.574 ; AGU:inst3|A[2] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.610      ;
+; -0.571 ; AGU:inst3|A[0] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.607      ;
+; -0.503 ; AGU:inst3|A[2] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.539      ;
+; -0.446 ; AGU:inst3|A[1] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.482      ;
+; -0.446 ; AGU:inst3|A[3] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.482      ;
+; -0.412 ; AGU:inst3|A[0] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.448      ;
+; -0.060 ; AGU:inst3|A[3] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.096      ;
+; -0.059 ; AGU:inst3|A[1] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.095      ;
+; -0.029 ; AGU:inst3|A[0] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.065      ;
+; -0.028 ; AGU:inst3|A[2] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 1.064      ;
+; 0.065  ; AGU:inst3|A[4] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.971      ;
+; 0.379  ; AGU:inst3|A[0] ; AGU:inst3|A[0] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.657      ;
++--------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'fDIV27M:inst4|fout'                                                                                      ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; 0.391 ; AGU:inst3|A[0] ; AGU:inst3|A[0] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.657      ;
+; 0.705 ; AGU:inst3|A[4] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.971      ;
+; 0.798 ; AGU:inst3|A[2] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799 ; AGU:inst3|A[0] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.065      ;
+; 0.829 ; AGU:inst3|A[1] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.095      ;
+; 0.830 ; AGU:inst3|A[3] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.096      ;
+; 1.182 ; AGU:inst3|A[0] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.448      ;
+; 1.216 ; AGU:inst3|A[3] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.482      ;
+; 1.216 ; AGU:inst3|A[1] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.482      ;
+; 1.273 ; AGU:inst3|A[2] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.539      ;
+; 1.341 ; AGU:inst3|A[0] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.607      ;
+; 1.344 ; AGU:inst3|A[2] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.610      ;
+; 1.375 ; AGU:inst3|A[1] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.641      ;
+; 1.412 ; AGU:inst3|A[0] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.678      ;
+; 1.446 ; AGU:inst3|A[1] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 1.712      ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'f'                                                                                                                                                                                                   ;
++-------+-------------------------+----------------------------------------------------------------------------------------------------------+--------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                                                                                                  ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+----------------------------------------------------------------------------------------------------------+--------------------+-------------+--------------+------------+------------+
+; 0.531 ; fDIV27M:inst4|count[31] ; fDIV27M:inst4|count[31]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.797      ;
+; 0.788 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[0]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.054      ;
+; 0.795 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[16]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.061      ;
+; 0.798 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[1]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[2]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.065      ;
+; 0.805 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[17]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; fDIV27M:inst4|count[7]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[9]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[11]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[13]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[14] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[15] ; fDIV27M:inst4|count[15]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[18] ; fDIV27M:inst4|count[18]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[23] ; fDIV27M:inst4|count[23]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[25]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[27]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[29] ; fDIV27M:inst4|count[29]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[30] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; fDIV27M:inst4|count[20] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.072      ;
+; 0.831 ; fDIV27M:inst4|count[3]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.097      ;
+; 0.838 ; fDIV27M:inst4|count[8]  ; fDIV27M:inst4|count[8]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[10]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; fDIV27M:inst4|count[12] ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; fDIV27M:inst4|count[19] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; fDIV27M:inst4|count[24] ; fDIV27M:inst4|count[24]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; fDIV27M:inst4|count[26] ; fDIV27M:inst4|count[26]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; fDIV27M:inst4|count[28] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; fDIV27M:inst4|count[5]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; fDIV27M:inst4|count[6]  ; fDIV27M:inst4|count[6]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.105      ;
+; 0.847 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[21]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.113      ;
+; 0.847 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[22]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.113      ;
+; 0.952 ; AGU:inst3|A[4]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg4 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.175      ; 1.361      ;
+; 0.962 ; AGU:inst3|A[1]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg1 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.175      ; 1.371      ;
+; 1.083 ; AGU:inst3|A[3]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg3 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.175      ; 1.492      ;
+; 1.091 ; AGU:inst3|A[2]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg2 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.175      ; 1.500      ;
+; 1.171 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[1]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.437      ;
+; 1.178 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[17]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.444      ;
+; 1.181 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[2]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.447      ;
+; 1.182 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.448      ;
+; 1.188 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[18]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189 ; fDIV27M:inst4|count[30] ; fDIV27M:inst4|count[31]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[14] ; fDIV27M:inst4|count[15]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[29] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[10]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[18] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[26]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; fDIV27M:inst4|count[20] ; fDIV27M:inst4|count[21]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.455      ;
+; 1.202 ; AGU:inst3|A[0]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg0 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.175      ; 1.611      ;
+; 1.217 ; fDIV27M:inst4|count[3]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.483      ;
+; 1.224 ; fDIV27M:inst4|count[8]  ; fDIV27M:inst4|count[9]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[11]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; fDIV27M:inst4|count[12] ; fDIV27M:inst4|count[13]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; fDIV27M:inst4|count[24] ; fDIV27M:inst4|count[25]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; fDIV27M:inst4|count[26] ; fDIV27M:inst4|count[27]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; fDIV27M:inst4|count[28] ; fDIV27M:inst4|count[29]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.224 ; fDIV27M:inst4|count[19] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225 ; fDIV27M:inst4|count[6]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; fDIV27M:inst4|count[5]  ; fDIV27M:inst4|count[6]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.491      ;
+; 1.233 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[23]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.499      ;
+; 1.233 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[22]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.499      ;
+; 1.242 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[2]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.508      ;
+; 1.249 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[18]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.515      ;
+; 1.252 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.518      ;
+; 1.253 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[6]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.519      ;
+; 1.259 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.525      ;
+; 1.260 ; fDIV27M:inst4|count[29] ; fDIV27M:inst4|count[31]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[15]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[11]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[13]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[27]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[29]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[18] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; fDIV27M:inst4|count[20] ; fDIV27M:inst4|count[22]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.526      ;
+; 1.279 ; fDIV27M:inst4|count[15] ; fDIV27M:inst4|count[16]                                                                                  ; f                  ; f           ; 0.000        ; 0.002      ; 1.547      ;
+; 1.281 ; fDIV27M:inst4|count[7]  ; fDIV27M:inst4|count[8]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.547      ;
+; 1.281 ; fDIV27M:inst4|count[23] ; fDIV27M:inst4|count[24]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.547      ;
+; 1.288 ; fDIV27M:inst4|count[3]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.554      ;
+; 1.295 ; fDIV27M:inst4|count[12] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; fDIV27M:inst4|count[28] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; fDIV27M:inst4|count[8]  ; fDIV27M:inst4|count[10]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; fDIV27M:inst4|count[24] ; fDIV27M:inst4|count[26]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; fDIV27M:inst4|count[26] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.295 ; fDIV27M:inst4|count[19] ; fDIV27M:inst4|count[21]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296 ; fDIV27M:inst4|count[5]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.562      ;
+; 1.304 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[23]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.570      ;
+; 1.313 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.579      ;
+; 1.320 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.586      ;
+; 1.323 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.589      ;
+; 1.324 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 1.590      ;
+; 1.330 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.596      ;
+; 1.331 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 1.597      ;
++-------+-------------------------+----------------------------------------------------------------------------------------------------------+--------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'f'                                                                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; f     ; Rise       ; f                                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[0]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[0]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[10]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[10]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[11]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[11]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[12]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[12]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[13]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[13]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[14]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[14]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[15]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[15]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[16]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[16]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[17]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[17]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[18]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[18]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[19]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[19]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[1]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[1]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[20]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[20]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[21]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[21]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[22]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[22]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[23]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[23]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[24]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[24]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[25]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[25]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[26]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[26]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[27]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[27]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[28]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[28]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[29]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[29]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[2]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[2]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[30]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[30]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[31]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[31]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[3]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[3]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[4]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[4]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[5]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[5]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[6]                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'fDIV27M:inst4|fout'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[4]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst4|fout|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst4|fout|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; dsw[*]    ; f          ; 0.960 ; 0.960 ; Rise       ; f               ;
+;  dsw[0]   ; f          ; 0.889 ; 0.889 ; Rise       ; f               ;
+;  dsw[1]   ; f          ; 0.624 ; 0.624 ; Rise       ; f               ;
+;  dsw[2]   ; f          ; 0.474 ; 0.474 ; Rise       ; f               ;
+;  dsw[3]   ; f          ; 0.960 ; 0.960 ; Rise       ; f               ;
+;  dsw[4]   ; f          ; 0.863 ; 0.863 ; Rise       ; f               ;
+; sel       ; f          ; 1.198 ; 1.198 ; Rise       ; f               ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; dsw[*]    ; f          ; -0.205 ; -0.205 ; Rise       ; f               ;
+;  dsw[0]   ; f          ; -0.620 ; -0.620 ; Rise       ; f               ;
+;  dsw[1]   ; f          ; -0.355 ; -0.355 ; Rise       ; f               ;
+;  dsw[2]   ; f          ; -0.205 ; -0.205 ; Rise       ; f               ;
+;  dsw[3]   ; f          ; -0.691 ; -0.691 ; Rise       ; f               ;
+;  dsw[4]   ; f          ; -0.594 ; -0.594 ; Rise       ; f               ;
+; sel       ; f          ; -0.402 ; -0.402 ; Rise       ; f               ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; _7seg1[*]  ; f          ; 12.514 ; 12.514 ; Rise       ; f               ;
+;  _7seg1[0] ; f          ; 12.501 ; 12.501 ; Rise       ; f               ;
+;  _7seg1[1] ; f          ; 12.490 ; 12.490 ; Rise       ; f               ;
+;  _7seg1[2] ; f          ; 12.500 ; 12.500 ; Rise       ; f               ;
+;  _7seg1[3] ; f          ; 12.514 ; 12.514 ; Rise       ; f               ;
+;  _7seg1[4] ; f          ; 12.242 ; 12.242 ; Rise       ; f               ;
+;  _7seg1[5] ; f          ; 12.263 ; 12.263 ; Rise       ; f               ;
+;  _7seg1[6] ; f          ; 12.255 ; 12.255 ; Rise       ; f               ;
+; _7seg2[*]  ; f          ; 11.855 ; 11.855 ; Rise       ; f               ;
+;  _7seg2[0] ; f          ; 11.855 ; 11.855 ; Rise       ; f               ;
+;  _7seg2[1] ; f          ; 11.853 ; 11.853 ; Rise       ; f               ;
+;  _7seg2[2] ; f          ; 11.456 ; 11.456 ; Rise       ; f               ;
+;  _7seg2[3] ; f          ; 11.414 ; 11.414 ; Rise       ; f               ;
+;  _7seg2[4] ; f          ; 11.468 ; 11.468 ; Rise       ; f               ;
+;  _7seg2[5] ; f          ; 11.703 ; 11.703 ; Rise       ; f               ;
+;  _7seg2[6] ; f          ; 11.662 ; 11.662 ; Rise       ; f               ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; _7seg1[*]  ; f          ; 12.015 ; 12.015 ; Rise       ; f               ;
+;  _7seg1[0] ; f          ; 12.285 ; 12.285 ; Rise       ; f               ;
+;  _7seg1[1] ; f          ; 12.253 ; 12.253 ; Rise       ; f               ;
+;  _7seg1[2] ; f          ; 12.262 ; 12.262 ; Rise       ; f               ;
+;  _7seg1[3] ; f          ; 12.275 ; 12.275 ; Rise       ; f               ;
+;  _7seg1[4] ; f          ; 12.032 ; 12.032 ; Rise       ; f               ;
+;  _7seg1[5] ; f          ; 12.022 ; 12.022 ; Rise       ; f               ;
+;  _7seg1[6] ; f          ; 12.015 ; 12.015 ; Rise       ; f               ;
+; _7seg2[*]  ; f          ; 11.037 ; 11.037 ; Rise       ; f               ;
+;  _7seg2[0] ; f          ; 11.482 ; 11.482 ; Rise       ; f               ;
+;  _7seg2[1] ; f          ; 11.483 ; 11.483 ; Rise       ; f               ;
+;  _7seg2[2] ; f          ; 11.080 ; 11.080 ; Rise       ; f               ;
+;  _7seg2[3] ; f          ; 11.037 ; 11.037 ; Rise       ; f               ;
+;  _7seg2[4] ; f          ; 11.102 ; 11.102 ; Rise       ; f               ;
+;  _7seg2[5] ; f          ; 11.323 ; 11.323 ; Rise       ; f               ;
+;  _7seg2[6] ; f          ; 11.281 ; 11.281 ; Rise       ; f               ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------+
+; Fast Model Setup Summary                    ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; f                  ; -1.460 ; -35.404       ;
+; fDIV27M:inst4|fout ; 0.242  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------+
+; Fast Model Hold Summary                    ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; fDIV27M:inst4|fout ; 0.215 ; 0.000         ;
+; f                  ; 0.243 ; 0.000         ;
++--------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------+
+; Fast Model Minimum Pulse Width Summary      ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; f                  ; -2.000 ; -118.380      ;
+; fDIV27M:inst4|fout ; -0.500 ; -5.000        ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'f'                                                                                                                                                                                                                                                                            ;
++--------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg0 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg1 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg2 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg3 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg4 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg5 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg6 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -1.460 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg7 ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7~porta_memory_reg0 ; f            ; f           ; 1.000        ; -0.017     ; 2.442      ;
+; -0.829 ; fDIV27M:inst4|count[0]                                                                                  ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.863      ;
+; -0.798 ; fDIV27M:inst4|count[1]                                                                                  ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.832      ;
+; -0.794 ; fDIV27M:inst4|count[0]                                                                                  ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.828      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[16]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[17]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[18]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[19]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[21]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[22]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[23]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[24]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[25]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[26]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[27]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[28]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.772 ; fDIV27M:inst4|count[22]                                                                                 ; fDIV27M:inst4|count[20]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.804      ;
+; -0.765 ; fDIV27M:inst4|count[20]                                                                                 ; fDIV27M:inst4|fout                                                                                      ; f            ; f           ; 0.500        ; -0.002     ; 1.295      ;
+; -0.764 ; fDIV27M:inst4|count[2]                                                                                  ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.798      ;
+; -0.763 ; fDIV27M:inst4|count[1]                                                                                  ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.797      ;
+; -0.759 ; fDIV27M:inst4|count[0]                                                                                  ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.793      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[16]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[17]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[18]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[19]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[21]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[22]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[23]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[24]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[25]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[26]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[27]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[28]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.748 ; fDIV27M:inst4|count[21]                                                                                 ; fDIV27M:inst4|count[20]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.780      ;
+; -0.744 ; fDIV27M:inst4|count[19]                                                                                 ; fDIV27M:inst4|fout                                                                                      ; f            ; f           ; 0.500        ; -0.002     ; 1.274      ;
+; -0.742 ; fDIV27M:inst4|count[3]                                                                                  ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.776      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[16]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[17]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[18]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[19]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[21]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[22]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[23]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[24]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[25]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[26]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[27]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[28]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.732 ; fDIV27M:inst4|count[11]                                                                                 ; fDIV27M:inst4|count[20]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.766      ;
+; -0.729 ; fDIV27M:inst4|count[2]                                                                                  ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.763      ;
+; -0.728 ; fDIV27M:inst4|count[1]                                                                                  ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.762      ;
+; -0.724 ; fDIV27M:inst4|count[0]                                                                                  ; fDIV27M:inst4|count[28]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.758      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[16]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[17]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[18]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[19]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[21]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[22]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[23]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[24]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[25]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[26]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[27]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[28]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.709 ; fDIV27M:inst4|count[27]                                                                                 ; fDIV27M:inst4|count[20]                                                                                 ; f            ; f           ; 1.000        ; 0.000      ; 1.741      ;
+; -0.707 ; fDIV27M:inst4|count[3]                                                                                  ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.741      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[16]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[17]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[18]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[19]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[21]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[22]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[23]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[24]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[25]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[26]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[27]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[28]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[29]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[30]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
+; -0.697 ; fDIV27M:inst4|count[10]                                                                                 ; fDIV27M:inst4|count[31]                                                                                 ; f            ; f           ; 1.000        ; 0.002      ; 1.731      ;
++--------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'fDIV27M:inst4|fout'                                                                                     ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; 0.242 ; AGU:inst3|A[1] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.790      ;
+; 0.254 ; AGU:inst3|A[0] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.778      ;
+; 0.277 ; AGU:inst3|A[1] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.755      ;
+; 0.289 ; AGU:inst3|A[0] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.743      ;
+; 0.293 ; AGU:inst3|A[2] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.739      ;
+; 0.328 ; AGU:inst3|A[2] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.704      ;
+; 0.371 ; AGU:inst3|A[1] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.661      ;
+; 0.371 ; AGU:inst3|A[3] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.661      ;
+; 0.383 ; AGU:inst3|A[0] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.649      ;
+; 0.511 ; AGU:inst3|A[1] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.521      ;
+; 0.511 ; AGU:inst3|A[3] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.521      ;
+; 0.518 ; AGU:inst3|A[0] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.514      ;
+; 0.521 ; AGU:inst3|A[2] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.511      ;
+; 0.561 ; AGU:inst3|A[4] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.471      ;
+; 0.665 ; AGU:inst3|A[0] ; AGU:inst3|A[0] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 1.000        ; 0.000      ; 0.367      ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'fDIV27M:inst4|fout'                                                                                      ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+; 0.215 ; AGU:inst3|A[0] ; AGU:inst3|A[0] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.367      ;
+; 0.319 ; AGU:inst3|A[4] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.471      ;
+; 0.359 ; AGU:inst3|A[2] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.511      ;
+; 0.362 ; AGU:inst3|A[0] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.514      ;
+; 0.369 ; AGU:inst3|A[3] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; AGU:inst3|A[1] ; AGU:inst3|A[1] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.521      ;
+; 0.497 ; AGU:inst3|A[0] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.649      ;
+; 0.509 ; AGU:inst3|A[3] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; AGU:inst3|A[1] ; AGU:inst3|A[2] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.661      ;
+; 0.552 ; AGU:inst3|A[2] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.704      ;
+; 0.587 ; AGU:inst3|A[2] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.739      ;
+; 0.591 ; AGU:inst3|A[0] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.743      ;
+; 0.603 ; AGU:inst3|A[1] ; AGU:inst3|A[3] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.755      ;
+; 0.626 ; AGU:inst3|A[0] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.778      ;
+; 0.638 ; AGU:inst3|A[1] ; AGU:inst3|A[4] ; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 0.000        ; 0.000      ; 0.790      ;
++-------+----------------+----------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'f'                                                                                                                                                                                                   ;
++-------+-------------------------+----------------------------------------------------------------------------------------------------------+--------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                                                                                                  ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+----------------------------------------------------------------------------------------------------------+--------------------+-------------+--------------+------------+------------+
+; 0.243 ; fDIV27M:inst4|count[31] ; fDIV27M:inst4|count[31]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.395      ;
+; 0.353 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[0]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.505      ;
+; 0.354 ; AGU:inst3|A[4]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg4 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.152      ; 0.644      ;
+; 0.355 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[16]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[1]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[2]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[17]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[9]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[11]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; fDIV27M:inst4|count[18] ; fDIV27M:inst4|count[18]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[25]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[27]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; fDIV27M:inst4|count[7]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[13]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[14] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[15] ; fDIV27M:inst4|count[15]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[23] ; fDIV27M:inst4|count[23]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[29] ; fDIV27M:inst4|count[29]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[30] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; fDIV27M:inst4|count[20] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; AGU:inst3|A[1]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg1 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.152      ; 0.651      ;
+; 0.369 ; fDIV27M:inst4|count[3]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; fDIV27M:inst4|count[8]  ; fDIV27M:inst4|count[8]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[10]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; fDIV27M:inst4|count[19] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; fDIV27M:inst4|count[24] ; fDIV27M:inst4|count[24]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; fDIV27M:inst4|count[26] ; fDIV27M:inst4|count[26]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; fDIV27M:inst4|count[5]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; fDIV27M:inst4|count[6]  ; fDIV27M:inst4|count[6]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; fDIV27M:inst4|count[12] ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; fDIV27M:inst4|count[28] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.524      ;
+; 0.375 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[21]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[22]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.527      ;
+; 0.410 ; AGU:inst3|A[3]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg3 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.152      ; 0.700      ;
+; 0.411 ; AGU:inst3|A[2]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg2 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.152      ; 0.701      ;
+; 0.474 ; AGU:inst3|A[0]          ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg0 ; fDIV27M:inst4|fout ; f           ; 0.000        ; 0.152      ; 0.764      ;
+; 0.491 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[1]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.643      ;
+; 0.493 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[17]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.645      ;
+; 0.495 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[2]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[18]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[10]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; fDIV27M:inst4|count[18] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[26]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; fDIV27M:inst4|count[30] ; fDIV27M:inst4|count[31]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; fDIV27M:inst4|count[14] ; fDIV27M:inst4|count[15]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; fDIV27M:inst4|count[29] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; fDIV27M:inst4|count[20] ; fDIV27M:inst4|count[21]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.651      ;
+; 0.509 ; fDIV27M:inst4|count[3]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; fDIV27M:inst4|count[8]  ; fDIV27M:inst4|count[9]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[11]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; fDIV27M:inst4|count[24] ; fDIV27M:inst4|count[25]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; fDIV27M:inst4|count[26] ; fDIV27M:inst4|count[27]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; fDIV27M:inst4|count[19] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; fDIV27M:inst4|count[6]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; fDIV27M:inst4|count[12] ; fDIV27M:inst4|count[13]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; fDIV27M:inst4|count[28] ; fDIV27M:inst4|count[29]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; fDIV27M:inst4|count[5]  ; fDIV27M:inst4|count[6]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.664      ;
+; 0.515 ; fDIV27M:inst4|count[22] ; fDIV27M:inst4|count[23]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.667      ;
+; 0.515 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[22]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.667      ;
+; 0.526 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[2]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.678      ;
+; 0.528 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[18]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.680      ;
+; 0.530 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[6]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.684      ;
+; 0.533 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[11]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[27]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; fDIV27M:inst4|count[18] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; fDIV27M:inst4|count[11] ; fDIV27M:inst4|count[13]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; fDIV27M:inst4|count[27] ; fDIV27M:inst4|count[29]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; fDIV27M:inst4|count[29] ; fDIV27M:inst4|count[31]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; fDIV27M:inst4|count[13] ; fDIV27M:inst4|count[15]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; fDIV27M:inst4|count[20] ; fDIV27M:inst4|count[22]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.686      ;
+; 0.544 ; fDIV27M:inst4|count[15] ; fDIV27M:inst4|count[16]                                                                                  ; f                  ; f           ; 0.000        ; 0.002      ; 0.698      ;
+; 0.544 ; fDIV27M:inst4|count[3]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.696      ;
+; 0.546 ; fDIV27M:inst4|count[8]  ; fDIV27M:inst4|count[10]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; fDIV27M:inst4|count[24] ; fDIV27M:inst4|count[26]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; fDIV27M:inst4|count[10] ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; fDIV27M:inst4|count[26] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; fDIV27M:inst4|count[19] ; fDIV27M:inst4|count[21]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; fDIV27M:inst4|count[12] ; fDIV27M:inst4|count[14]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; fDIV27M:inst4|count[28] ; fDIV27M:inst4|count[30]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; fDIV27M:inst4|count[5]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.699      ;
+; 0.550 ; fDIV27M:inst4|count[21] ; fDIV27M:inst4|count[23]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.702      ;
+; 0.554 ; fDIV27M:inst4|count[7]  ; fDIV27M:inst4|count[8]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.706      ;
+; 0.554 ; fDIV27M:inst4|count[23] ; fDIV27M:inst4|count[24]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.706      ;
+; 0.561 ; fDIV27M:inst4|count[0]  ; fDIV27M:inst4|count[3]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.713      ;
+; 0.563 ; fDIV27M:inst4|count[16] ; fDIV27M:inst4|count[19]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.715      ;
+; 0.565 ; fDIV27M:inst4|count[1]  ; fDIV27M:inst4|count[4]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.717      ;
+; 0.566 ; fDIV27M:inst4|count[2]  ; fDIV27M:inst4|count[5]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; fDIV27M:inst4|count[17] ; fDIV27M:inst4|count[20]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.719      ;
+; 0.567 ; fDIV27M:inst4|count[4]  ; fDIV27M:inst4|count[7]                                                                                   ; f                  ; f           ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; fDIV27M:inst4|count[9]  ; fDIV27M:inst4|count[12]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; fDIV27M:inst4|count[25] ; fDIV27M:inst4|count[28]                                                                                  ; f                  ; f           ; 0.000        ; 0.000      ; 0.720      ;
++-------+-------------------------+----------------------------------------------------------------------------------------------------------+--------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'f'                                                                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a1~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a2~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a3~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a4~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a5~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a6~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; High Pulse Width ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -2.000 ; 0.500        ; 2.500          ; Low Pulse Width  ; f     ; Rise       ; RAM1:inst|altsyncram:altsyncram_component|altsyncram_2qd1:auto_generated|ram_block1a7~porta_memory_reg0  ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; f     ; Rise       ; f                                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[0]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[0]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[10]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[10]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[11]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[11]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[12]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[12]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[13]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[13]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[14]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[14]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[15]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[15]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[16]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[16]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[17]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[17]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[18]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[18]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[19]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[19]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[1]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[1]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[20]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[20]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[21]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[21]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[22]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[22]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[23]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[23]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[24]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[24]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[25]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[25]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[26]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[26]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[27]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[27]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[28]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[28]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[29]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[29]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[2]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[2]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[30]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[30]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[31]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[31]                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[3]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[3]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[4]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[4]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[5]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; f     ; Rise       ; fDIV27M:inst4|count[5]                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; f     ; Rise       ; fDIV27M:inst4|count[6]                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'fDIV27M:inst4|fout'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[4]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; AGU:inst3|A[4]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst3|A[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst3|A[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst4|fout|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst4|fout|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fDIV27M:inst4|fout ; Rise       ; inst4|fout~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; dsw[*]    ; f          ; 0.144  ; 0.144  ; Rise       ; f               ;
+;  dsw[0]   ; f          ; 0.077  ; 0.077  ; Rise       ; f               ;
+;  dsw[1]   ; f          ; -0.053 ; -0.053 ; Rise       ; f               ;
+;  dsw[2]   ; f          ; -0.120 ; -0.120 ; Rise       ; f               ;
+;  dsw[3]   ; f          ; 0.144  ; 0.144  ; Rise       ; f               ;
+;  dsw[4]   ; f          ; 0.113  ; 0.113  ; Rise       ; f               ;
+; sel       ; f          ; 0.263  ; 0.263  ; Rise       ; f               ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; dsw[*]    ; f          ; 0.259  ; 0.259  ; Rise       ; f               ;
+;  dsw[0]   ; f          ; 0.062  ; 0.062  ; Rise       ; f               ;
+;  dsw[1]   ; f          ; 0.192  ; 0.192  ; Rise       ; f               ;
+;  dsw[2]   ; f          ; 0.259  ; 0.259  ; Rise       ; f               ;
+;  dsw[3]   ; f          ; -0.005 ; -0.005 ; Rise       ; f               ;
+;  dsw[4]   ; f          ; 0.026  ; 0.026  ; Rise       ; f               ;
+; sel       ; f          ; 0.121  ; 0.121  ; Rise       ; f               ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; _7seg1[*]  ; f          ; 7.049 ; 7.049 ; Rise       ; f               ;
+;  _7seg1[0] ; f          ; 7.049 ; 7.049 ; Rise       ; f               ;
+;  _7seg1[1] ; f          ; 7.012 ; 7.012 ; Rise       ; f               ;
+;  _7seg1[2] ; f          ; 7.029 ; 7.029 ; Rise       ; f               ;
+;  _7seg1[3] ; f          ; 7.036 ; 7.036 ; Rise       ; f               ;
+;  _7seg1[4] ; f          ; 6.926 ; 6.926 ; Rise       ; f               ;
+;  _7seg1[5] ; f          ; 6.919 ; 6.919 ; Rise       ; f               ;
+;  _7seg1[6] ; f          ; 6.916 ; 6.916 ; Rise       ; f               ;
+; _7seg2[*]  ; f          ; 6.697 ; 6.697 ; Rise       ; f               ;
+;  _7seg2[0] ; f          ; 6.697 ; 6.697 ; Rise       ; f               ;
+;  _7seg2[1] ; f          ; 6.696 ; 6.696 ; Rise       ; f               ;
+;  _7seg2[2] ; f          ; 6.472 ; 6.472 ; Rise       ; f               ;
+;  _7seg2[3] ; f          ; 6.447 ; 6.447 ; Rise       ; f               ;
+;  _7seg2[4] ; f          ; 6.483 ; 6.483 ; Rise       ; f               ;
+;  _7seg2[5] ; f          ; 6.583 ; 6.583 ; Rise       ; f               ;
+;  _7seg2[6] ; f          ; 6.578 ; 6.578 ; Rise       ; f               ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; _7seg1[*]  ; f          ; 6.802 ; 6.802 ; Rise       ; f               ;
+;  _7seg1[0] ; f          ; 6.935 ; 6.935 ; Rise       ; f               ;
+;  _7seg1[1] ; f          ; 6.901 ; 6.901 ; Rise       ; f               ;
+;  _7seg1[2] ; f          ; 6.910 ; 6.910 ; Rise       ; f               ;
+;  _7seg1[3] ; f          ; 6.923 ; 6.923 ; Rise       ; f               ;
+;  _7seg1[4] ; f          ; 6.813 ; 6.813 ; Rise       ; f               ;
+;  _7seg1[5] ; f          ; 6.805 ; 6.805 ; Rise       ; f               ;
+;  _7seg1[6] ; f          ; 6.802 ; 6.802 ; Rise       ; f               ;
+; _7seg2[*]  ; f          ; 6.273 ; 6.273 ; Rise       ; f               ;
+;  _7seg2[0] ; f          ; 6.528 ; 6.528 ; Rise       ; f               ;
+;  _7seg2[1] ; f          ; 6.529 ; 6.529 ; Rise       ; f               ;
+;  _7seg2[2] ; f          ; 6.297 ; 6.297 ; Rise       ; f               ;
+;  _7seg2[3] ; f          ; 6.273 ; 6.273 ; Rise       ; f               ;
+;  _7seg2[4] ; f          ; 6.318 ; 6.318 ; Rise       ; f               ;
+;  _7seg2[5] ; f          ; 6.404 ; 6.404 ; Rise       ; f               ;
+;  _7seg2[6] ; f          ; 6.399 ; 6.399 ; Rise       ; f               ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                               ;
++---------------------+----------+-------+----------+---------+---------------------+
+; Clock               ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack    ; -2.780   ; 0.215 ; N/A      ; N/A     ; -2.000              ;
+;  f                  ; -2.780   ; 0.243 ; N/A      ; N/A     ; -2.000              ;
+;  fDIV27M:inst4|fout ; -0.676   ; 0.215 ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS     ; -105.218 ; 0.0   ; 0.0      ; 0.0     ; -123.38             ;
+;  f                  ; -103.432 ; 0.000 ; N/A      ; N/A     ; -118.380            ;
+;  fDIV27M:inst4|fout ; -1.786   ; 0.000 ; N/A      ; N/A     ; -5.000              ;
++---------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; dsw[*]    ; f          ; 0.960 ; 0.960 ; Rise       ; f               ;
+;  dsw[0]   ; f          ; 0.889 ; 0.889 ; Rise       ; f               ;
+;  dsw[1]   ; f          ; 0.624 ; 0.624 ; Rise       ; f               ;
+;  dsw[2]   ; f          ; 0.474 ; 0.474 ; Rise       ; f               ;
+;  dsw[3]   ; f          ; 0.960 ; 0.960 ; Rise       ; f               ;
+;  dsw[4]   ; f          ; 0.863 ; 0.863 ; Rise       ; f               ;
+; sel       ; f          ; 1.198 ; 1.198 ; Rise       ; f               ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; dsw[*]    ; f          ; 0.259  ; 0.259  ; Rise       ; f               ;
+;  dsw[0]   ; f          ; 0.062  ; 0.062  ; Rise       ; f               ;
+;  dsw[1]   ; f          ; 0.192  ; 0.192  ; Rise       ; f               ;
+;  dsw[2]   ; f          ; 0.259  ; 0.259  ; Rise       ; f               ;
+;  dsw[3]   ; f          ; -0.005 ; -0.005 ; Rise       ; f               ;
+;  dsw[4]   ; f          ; 0.026  ; 0.026  ; Rise       ; f               ;
+; sel       ; f          ; 0.121  ; 0.121  ; Rise       ; f               ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; _7seg1[*]  ; f          ; 12.514 ; 12.514 ; Rise       ; f               ;
+;  _7seg1[0] ; f          ; 12.501 ; 12.501 ; Rise       ; f               ;
+;  _7seg1[1] ; f          ; 12.490 ; 12.490 ; Rise       ; f               ;
+;  _7seg1[2] ; f          ; 12.500 ; 12.500 ; Rise       ; f               ;
+;  _7seg1[3] ; f          ; 12.514 ; 12.514 ; Rise       ; f               ;
+;  _7seg1[4] ; f          ; 12.242 ; 12.242 ; Rise       ; f               ;
+;  _7seg1[5] ; f          ; 12.263 ; 12.263 ; Rise       ; f               ;
+;  _7seg1[6] ; f          ; 12.255 ; 12.255 ; Rise       ; f               ;
+; _7seg2[*]  ; f          ; 11.855 ; 11.855 ; Rise       ; f               ;
+;  _7seg2[0] ; f          ; 11.855 ; 11.855 ; Rise       ; f               ;
+;  _7seg2[1] ; f          ; 11.853 ; 11.853 ; Rise       ; f               ;
+;  _7seg2[2] ; f          ; 11.456 ; 11.456 ; Rise       ; f               ;
+;  _7seg2[3] ; f          ; 11.414 ; 11.414 ; Rise       ; f               ;
+;  _7seg2[4] ; f          ; 11.468 ; 11.468 ; Rise       ; f               ;
+;  _7seg2[5] ; f          ; 11.703 ; 11.703 ; Rise       ; f               ;
+;  _7seg2[6] ; f          ; 11.662 ; 11.662 ; Rise       ; f               ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; _7seg1[*]  ; f          ; 6.802 ; 6.802 ; Rise       ; f               ;
+;  _7seg1[0] ; f          ; 6.935 ; 6.935 ; Rise       ; f               ;
+;  _7seg1[1] ; f          ; 6.901 ; 6.901 ; Rise       ; f               ;
+;  _7seg1[2] ; f          ; 6.910 ; 6.910 ; Rise       ; f               ;
+;  _7seg1[3] ; f          ; 6.923 ; 6.923 ; Rise       ; f               ;
+;  _7seg1[4] ; f          ; 6.813 ; 6.813 ; Rise       ; f               ;
+;  _7seg1[5] ; f          ; 6.805 ; 6.805 ; Rise       ; f               ;
+;  _7seg1[6] ; f          ; 6.802 ; 6.802 ; Rise       ; f               ;
+; _7seg2[*]  ; f          ; 6.273 ; 6.273 ; Rise       ; f               ;
+;  _7seg2[0] ; f          ; 6.528 ; 6.528 ; Rise       ; f               ;
+;  _7seg2[1] ; f          ; 6.529 ; 6.529 ; Rise       ; f               ;
+;  _7seg2[2] ; f          ; 6.297 ; 6.297 ; Rise       ; f               ;
+;  _7seg2[3] ; f          ; 6.273 ; 6.273 ; Rise       ; f               ;
+;  _7seg2[4] ; f          ; 6.318 ; 6.318 ; Rise       ; f               ;
+;  _7seg2[5] ; f          ; 6.404 ; 6.404 ; Rise       ; f               ;
+;  _7seg2[6] ; f          ; 6.399 ; 6.399 ; Rise       ; f               ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Transfers                                                                     ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; f                  ; f                  ; 1432     ; 0        ; 29       ; 0        ;
+; fDIV27M:inst4|fout ; f                  ; 5        ; 0        ; 0        ; 0        ;
+; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 15       ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Hold Transfers                                                                      ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; f                  ; f                  ; 1432     ; 0        ; 29       ; 0        ;
+; fDIV27M:inst4|fout ; f                  ; 5        ; 0        ; 0        ; 0        ;
+; fDIV27M:inst4|fout ; fDIV27M:inst4|fout ; 15       ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 70    ; 70   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Sep 29 22:14:59 2019
+Info: Command: quartus_sta hw -c hw
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'hw.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name f f
+    Info (332105): create_clock -period 1.000 -name fDIV27M:inst4|fout fDIV27M:inst4|fout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.780
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.780      -103.432 f 
+    Info (332119):    -0.676        -1.786 fDIV27M:inst4|fout 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 fDIV27M:inst4|fout 
+    Info (332119):     0.531         0.000 f 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.000      -118.380 f 
+    Info (332119):    -0.500        -5.000 fDIV27M:inst4|fout 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.460
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.460       -35.404 f 
+    Info (332119):     0.242         0.000 fDIV27M:inst4|fout 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 fDIV27M:inst4|fout 
+    Info (332119):     0.243         0.000 f 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.000      -118.380 f 
+    Info (332119):    -0.500        -5.000 fDIV27M:inst4|fout 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4551 megabytes
+    Info: Processing ended: Sun Sep 29 22:15:00 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

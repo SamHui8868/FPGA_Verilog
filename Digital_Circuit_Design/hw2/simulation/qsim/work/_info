@@ -1,0 +1,321 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\user\Desktop\EE exp3\hw2\simulation\qsim
+vfDIV27M
+Z1 !s100 Gdo^YWf5[E:]^b[]:QlWL3
+Z2 I[NN^l0GNIj2d]536TINlA2
+Z3 Vg16e9X?:]gV4VXWR8MfVK2
+Z4 dC:\Users\user\Desktop\EE exp3\hw2\simulation\qsim
+Z5 w1572185630
+Z6 8hw2.vo
+Z7 Fhw2.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|hw2.vo|
+Z10 o-work work -O0
+Z11 nf@d@i@v27@m
+!i10b 1
+!s85 0
+Z12 !s108 1572185630.755000
+Z13 !s107 hw2.vo|
+!s101 -O0
+vfDIV27M_vlg_check_tst
+!i10b 1
+Z14 !s100 mo=zFH>2B1B^]`H9jNmL20
+Z15 IVCOIcdXI1Zb4A:9TAMHBS0
+Z16 V5fO[DeZchVI85nASbD3j>0
+R4
+Z17 w1572185629
+Z18 8hw2.vt
+Z19 Fhw2.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z20 !s108 1572185630.837000
+Z21 !s107 hw2.vt|
+Z22 !s90 -work|work|hw2.vt|
+!s101 -O0
+R10
+Z23 nf@d@i@v27@m_vlg_check_tst
+vfDIV27M_vlg_sample_tst
+!i10b 1
+Z24 !s100 dV]BZW;UbX5f:?6a>;`[Q2
+Z25 I66l@z3zoS<zbnS3I7P=>_2
+Z26 VaXdR7ECMJEaS`@6_`_C5H2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 nf@d@i@v27@m_vlg_sample_tst
+vfDIV27M_vlg_vec_tst
+!i10b 1
+Z28 !s100 ARFZPclb?HPVMFR6R;^R@1
+Z29 I;6zfO<CHo<Qm3nAcm?QK?1
+Z30 V4h^33gnndWM:5]5O9<7V90
+R4
+R17
+R18
+R19
+Z31 L0 154
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 nf@d@i@v27@m_vlg_vec_tst
+vhw2
+Z33 !s100 O?CR3i:m^Y^hLmjMML0oK1
+Z34 I^lYVEhY4FIWB?NNQ7T42H3
+Z35 VNb0aMSiLe=8LjiW98HFm?3
+R4
+Z36 w1570973322
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z37 !s108 1570973322.728000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vhw2_vlg_check_tst
+Z38 !s100 ]QP@jBBzS6_YC45<7Jf^?3
+Z39 IDNGFJVz1Uj97kP=@Mb3f^1
+Z40 VZ_^oLjh;e?P0M7RLNhmK20
+R4
+Z41 w1570973321
+R18
+R19
+L0 63
+R8
+r1
+31
+Z42 !s108 1570973322.796000
+Z43 !s107 hw2.vt|
+R22
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vhw2_vlg_sample_tst
+Z44 !s100 z4hlEZJg>e`MTm6Li[3Z90
+Z45 I@I33k0J^NiAB7@4fm5[Je1
+Z46 VHOc6X6^N:VGiP;ni?NS;<0
+R4
+R41
+R18
+R19
+L0 29
+R8
+r1
+31
+R42
+R43
+R22
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vhw2_vlg_vec_tst
+Z47 I8QnBMS@a1EfnzKXC4mj4C1
+Z48 VY6N1SC43nRD9k=3KZRoLM0
+R4
+R41
+R18
+R19
+Z49 L0 243
+R8
+r1
+31
+R42
+R43
+R22
+R10
+Z50 !s100 D5Qfb6QDY=3^J_Lo]ibJ23
+!i10b 1
+!s85 0
+!s101 -O0
+vsel_DIVN
+Z51 !s100 ?GJg=FDY>^JODj3nfX@4N2
+Z52 I831G@bfmkj8@TEjhEDUg_1
+Z53 V:eDL;dB[h9e31J3;3NFaA0
+R4
+Z54 w1570781775
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z55 nsel_@d@i@v@n
+Z56 !s108 1570781775.778000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vsel_DIVN_vlg_check_tst
+Z57 !s100 KV9XfmX1oFA]g]?DTcX`83
+Z58 I@R2O4NgIo9TYZ0Dge>9eE2
+Z59 VKE6kOU>Gl1SN6O:OXdPTI0
+R4
+Z60 w1570781774
+R18
+R19
+L0 57
+R8
+r1
+31
+Z61 !s108 1570781775.847000
+R43
+R22
+R10
+Z62 nsel_@d@i@v@n_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vsel_DIVN_vlg_sample_tst
+Z63 !s100 >M0fRJ2>MG:Inla46i<k:2
+Z64 IFjG7[iC45AzZ8D^W8^gO;3
+Z65 VZ]Sjjf:R>M`3N<Wog18:k2
+R4
+R60
+R18
+R19
+L0 29
+R8
+r1
+31
+R61
+R43
+R22
+R10
+Z66 nsel_@d@i@v@n_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vsel_DIVN_vlg_vec_tst
+Z67 !s100 @GZ3g:G8OniN8m;IJcDSY3
+Z68 IcNooIKocm5]Q<6lz[80C^2
+Z69 Vn<XYB^55V:S1_4Eod`:Qc2
+R4
+R60
+R18
+R19
+Z70 L0 709
+R8
+r1
+31
+R61
+R43
+R22
+R10
+Z71 nsel_@d@i@v@n_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vstepMotorctr
+Z72 !s100 GB<@F]bIzTe;Q6PNKcVYH3
+Z73 Ib^QXBP8S=IDJz2jfYMTEn2
+Z74 VJfiAe[@M=X8F3>1VT[Dg;2
+R4
+Z75 w1570866624
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z76 nstep@motorctr
+Z77 !s108 1570866624.801000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vstepMotorctr_vlg_check_tst
+Z78 !s100 h`Z4VNkZSKX3kf:>6CdIm3
+Z79 IUJH3DOSN`3lLCA0hfBPA:1
+Z80 VJ^>fG:j;WzWB]Aa=mEK;O1
+R4
+Z81 w1570866623
+R18
+R19
+L0 61
+R8
+r1
+31
+Z82 !s108 1570866624.866000
+R43
+R22
+R10
+Z83 nstep@motorctr_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vstepMotorctr_vlg_sample_tst
+Z84 !s100 i3PHgQ_:U<E;:?kjNI7kL3
+Z85 I_Mil][AJ^kOj@b=6mHlQk0
+Z86 V4Fc?:;3<G0J7SCU_f4[F<0
+R4
+R81
+R18
+R19
+L0 29
+R8
+r1
+31
+R82
+R43
+R22
+R10
+Z87 nstep@motorctr_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vstepMotorctr_vlg_vec_tst
+Z88 I]<RfER`QUcY>m8VfOfchR0
+Z89 VzQo@^6hfFWiDNGZRF>;`M2
+R4
+R81
+R18
+R19
+Z90 L0 209
+R8
+r1
+31
+R82
+R43
+R22
+R10
+Z91 nstep@motorctr_vlg_vec_tst
+Z92 !s100 lG67Hg^Sn8A^]nMicJHg`3
+!i10b 1
+!s85 0
+!s101 -O0

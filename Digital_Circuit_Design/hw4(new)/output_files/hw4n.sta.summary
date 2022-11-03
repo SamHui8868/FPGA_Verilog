@@ -1,0 +1,117 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'ctrl:inst4|state.001'
+Slack : -5.422
+TNS   : -79.378
+
+Type  : Slow Model Setup 'F'
+Slack : -4.788
+TNS   : -290.404
+
+Type  : Slow Model Setup 'FDIV25K:inst3|fout'
+Slack : -3.450
+TNS   : -50.122
+
+Type  : Slow Model Setup 'FDIV:inst2|fout'
+Slack : -1.000
+TNS   : -3.220
+
+Type  : Slow Model Hold 'FDIV25K:inst3|fout'
+Slack : -1.638
+TNS   : -8.094
+
+Type  : Slow Model Hold 'FDIV:inst2|fout'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'F'
+Slack : 0.531
+TNS   : 0.000
+
+Type  : Slow Model Hold 'ctrl:inst4|state.001'
+Slack : 4.613
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'FDIV25K:inst3|fout'
+Slack : 0.689
+TNS   : 0.000
+
+Type  : Slow Model Removal 'FDIV25K:inst3|fout'
+Slack : -0.470
+TNS   : -6.705
+
+Type  : Slow Model Minimum Pulse Width 'F'
+Slack : -2.000
+TNS   : -215.380
+
+Type  : Slow Model Minimum Pulse Width 'FDIV25K:inst3|fout'
+Slack : -0.500
+TNS   : -26.000
+
+Type  : Slow Model Minimum Pulse Width 'FDIV:inst2|fout'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'ctrl:inst4|state.001'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'ctrl:inst4|state.001'
+Slack : -2.921
+TNS   : -43.314
+
+Type  : Fast Model Setup 'FDIV25K:inst3|fout'
+Slack : -1.659
+TNS   : -22.339
+
+Type  : Fast Model Setup 'F'
+Slack : -1.583
+TNS   : -104.454
+
+Type  : Fast Model Setup 'FDIV:inst2|fout'
+Slack : 0.074
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FDIV25K:inst3|fout'
+Slack : -1.073
+TNS   : -8.532
+
+Type  : Fast Model Hold 'FDIV:inst2|fout'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'F'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast Model Hold 'ctrl:inst4|state.001'
+Slack : 3.119
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'FDIV25K:inst3|fout'
+Slack : 0.588
+TNS   : 0.000
+
+Type  : Fast Model Removal 'FDIV25K:inst3|fout'
+Slack : -0.233
+TNS   : -3.335
+
+Type  : Fast Model Minimum Pulse Width 'F'
+Slack : -2.000
+TNS   : -215.380
+
+Type  : Fast Model Minimum Pulse Width 'FDIV25K:inst3|fout'
+Slack : -0.500
+TNS   : -26.000
+
+Type  : Fast Model Minimum Pulse Width 'FDIV:inst2|fout'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'ctrl:inst4|state.001'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

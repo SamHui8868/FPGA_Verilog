@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.225 ns
+From           : ADdin[4]
+To             : ADdff8:inst4|dout[4]
+From Clock     : --
+To Clock       : _50Mclk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.237 ns
+From           : serial_out:inst13|store[23]~latch
+To             : Data
+From Clock     : _50Mclk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.794 ns
+From           : eoc
+To             : ADctrl:inst3|cs.101
+From Clock     : --
+To Clock       : _50Mclk
+Failed Paths   : 0
+
+Type           : Clock Setup: '_50Mclk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 170.18 MHz ( period = 5.876 ns )
+From           : FDIV10:inst7|count[25]
+To             : FDIV10:inst7|fout
+From Clock     : _50Mclk
+To Clock       : _50Mclk
+Failed Paths   : 0
+
+Type           : Clock Hold: '_50Mclk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : FDIV10:inst7|fout
+To             : oneshot:inst12|cs.00
+From Clock     : _50Mclk
+To Clock       : _50Mclk
+Failed Paths   : 261
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 261
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,17 @@
+module hw3_1(clk,reset,f0,f1,f2,over);
+input clk,reset;
+output[7:0] f0,f1,f2;
+output over;
+wire[3:0] b0,b1,b2; 
+reg[7:0] count;
+always @(negedge clk,negedge reset)
+if(reset==0)
+count=0;
+else
+count=count+1'b1;
+assign over=(count==8'b11111111)?1'b1:1'b0;
+code_to_bcd v0(count,b0,b1,b2);
+_7seg v1(b0,f0);
+_7seg v2(b1,f1);
+_7seg v3(b2,f2);
+endmodule

@@ -1,0 +1,141 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'LEDctrl:inst10|state.001'
+Slack : -5.230
+TNS   : -115.642
+
+Type  : Slow Model Setup '_50Mclk'
+Slack : -3.262
+TNS   : -343.260
+
+Type  : Slow Model Setup 'FDIV25K:inst8|fout'
+Slack : -2.995
+TNS   : -67.708
+
+Type  : Slow Model Setup 'FDIV10:inst7|fout'
+Slack : -0.725
+TNS   : -2.703
+
+Type  : Slow Model Setup 'FDIV50K:inst9|fout'
+Slack : -0.326
+TNS   : -2.602
+
+Type  : Slow Model Hold 'FDIV25K:inst8|fout'
+Slack : -2.367
+TNS   : -30.251
+
+Type  : Slow Model Hold 'FDIV50K:inst9|fout'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold '_50Mclk'
+Slack : 0.531
+TNS   : 0.000
+
+Type  : Slow Model Hold 'FDIV10:inst7|fout'
+Slack : 0.877
+TNS   : 0.000
+
+Type  : Slow Model Hold 'LEDctrl:inst10|state.001'
+Slack : 4.609
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'FDIV25K:inst8|fout'
+Slack : 0.987
+TNS   : 0.000
+
+Type  : Slow Model Removal 'FDIV25K:inst8|fout'
+Slack : -0.792
+TNS   : -17.042
+
+Type  : Slow Model Minimum Pulse Width '_50Mclk'
+Slack : -2.000
+TNS   : -340.380
+
+Type  : Slow Model Minimum Pulse Width 'FDIV25K:inst8|fout'
+Slack : -0.500
+TNS   : -34.000
+
+Type  : Slow Model Minimum Pulse Width 'FDIV50K:inst9|fout'
+Slack : -0.500
+TNS   : -14.000
+
+Type  : Slow Model Minimum Pulse Width 'FDIV10:inst7|fout'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Slow Model Minimum Pulse Width 'LEDctrl:inst10|state.001'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'LEDctrl:inst10|state.001'
+Slack : -2.832
+TNS   : -63.720
+
+Type  : Fast Model Setup '_50Mclk'
+Slack : -1.460
+TNS   : -116.336
+
+Type  : Fast Model Setup 'FDIV25K:inst8|fout'
+Slack : -1.436
+TNS   : -30.135
+
+Type  : Fast Model Setup 'FDIV10:inst7|fout'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast Model Setup 'FDIV50K:inst9|fout'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FDIV25K:inst8|fout'
+Slack : -1.505
+TNS   : -23.485
+
+Type  : Fast Model Hold 'FDIV50K:inst9|fout'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold '_50Mclk'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FDIV10:inst7|fout'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast Model Hold 'LEDctrl:inst10|state.001'
+Slack : 3.125
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'FDIV25K:inst8|fout'
+Slack : 0.752
+TNS   : 0.000
+
+Type  : Fast Model Removal 'FDIV25K:inst8|fout'
+Slack : -0.412
+TNS   : -8.910
+
+Type  : Fast Model Minimum Pulse Width '_50Mclk'
+Slack : -2.000
+TNS   : -340.380
+
+Type  : Fast Model Minimum Pulse Width 'FDIV25K:inst8|fout'
+Slack : -0.500
+TNS   : -34.000
+
+Type  : Fast Model Minimum Pulse Width 'FDIV50K:inst9|fout'
+Slack : -0.500
+TNS   : -14.000
+
+Type  : Fast Model Minimum Pulse Width 'FDIV10:inst7|fout'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width 'LEDctrl:inst10|state.001'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

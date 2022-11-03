@@ -1,0 +1,22 @@
+module serial_out(din,start,clk,dout);
+input start;
+input [15:0]din;
+output clk;
+output dout;
+reg [15:0] store;
+wire[15:0]_store;
+
+	assign _store={store[14:1],1'b0};
+		
+	always @(posedge clk or posedge start)
+		begin
+			if(start)
+				store = din;
+			else
+				begin
+     store<=_store;			
+			end
+		end
+
+	assign dout = store[15];
+endmodule	

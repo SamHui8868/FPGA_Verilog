@@ -1,0 +1,13 @@
+
+State Machine - |hw4|oneshot:inst6|cs
+Name cs.00 cs.10 cs.01 
+cs.00 0 0 0 
+cs.01 1 0 1 
+cs.10 1 1 0 
+
+State Machine - |hw4|ctrl:inst7|cs
+Name cs.11 cs.10 cs.01 cs.00 
+cs.00 0 0 0 0 
+cs.01 0 0 1 1 
+cs.10 0 1 0 1 
+cs.11 1 0 0 1 

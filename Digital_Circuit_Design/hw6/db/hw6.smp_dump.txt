@@ -1,0 +1,21 @@
+
+State Machine - |hw6|oneshot:inst12|cs
+Name cs.00 cs.10 cs.01 
+cs.00 0 0 0 
+cs.01 1 0 1 
+cs.10 1 1 0 
+
+State Machine - |hw6|LEDctrl:inst10|state
+Name state.000 state.010 state.001 
+state.000 0 0 0 
+state.001 1 0 1 
+state.010 1 1 0 
+
+State Machine - |hw6|ADctrl:inst3|cs
+Name cs.101 cs.100 cs.011 cs.010 cs.001 cs.000 
+cs.000 0 0 0 0 0 0 
+cs.001 0 0 0 0 1 1 
+cs.010 0 0 0 1 0 1 
+cs.011 0 0 1 0 0 1 
+cs.100 0 1 0 0 0 1 
+cs.101 1 0 0 0 0 1 

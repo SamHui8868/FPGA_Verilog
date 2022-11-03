@@ -1,0 +1,134 @@
+$comment
+	File created using the following command:
+		vcd file hw3.msim.vcd -direction
+$end
+$date
+	Sun Oct 27 17:31:30 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module _output_vlg_vec_tst $end
+$var reg 5 ! S [4:0] $end
+$var reg 1 " _end $end
+$var reg 1 # _reset $end
+$var reg 1 $ change $end
+$var wire 1 % reset $end
+$var wire 1 & sampler $end
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - _reset~input_o $end
+$var wire 1 . S[0]~input_o $end
+$var wire 1 / reset~output_o $end
+$var wire 1 0 S[2]~input_o $end
+$var wire 1 1 S[3]~input_o $end
+$var wire 1 2 S[1]~input_o $end
+$var wire 1 3 _S~0_combout $end
+$var wire 1 4 S[4]~input_o $end
+$var wire 1 5 _end~input_o $end
+$var wire 1 6 change~input_o $end
+$var wire 1 7 reset~0_combout $end
+$var wire 1 8 reset~1_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11111 !
+0"
+0#
+0$
+0%
+x&
+0'
+1(
+x)
+1*
+1+
+1,
+0-
+1.
+0/
+10
+11
+12
+03
+14
+05
+06
+07
+08
+$end
+#20000
+1#
+1-
+0&
+17
+18
+1/
+1%
+#80000
+0#
+0-
+1&
+07
+08
+0/
+0%
+#120000
+1"
+15
+0&
+17
+18
+1/
+1%
+#180000
+0"
+05
+1&
+07
+08
+0/
+0%
+#240000
+1$
+16
+0&
+17
+18
+1/
+1%
+#330000
+0$
+06
+1&
+07
+08
+0/
+0%
+#590000
+b1111 !
+b111 !
+b11 !
+b1 !
+b0 !
+0.
+02
+00
+01
+04
+0&
+13
+18
+1/
+1%
+#1000000

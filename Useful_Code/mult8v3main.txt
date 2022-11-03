@@ -1,0 +1,113 @@
+module mul(clk,load,work,a,b,m,db,add,cb);
+input[7:0] a,b;
+input clk,load,work;
+output reg[15:0] m;
+wire[7:0] da;
+output[15:0] db,add,cb;
+wire q;
+
+
+MFreg v0(a,da,clk,load,work,1'b1);
+
+MFreg16 v1({8'd0,b},db,clk,load,work,1'b0);
+
+assign add=(da[0])?db:16'd0;
+
+csadd16(m,add,1'b0,cb,q);
+
+always@(negedge clk&work)
+if(load==1'b1)
+m<=16'b0;
+else
+m<=cb;
+
+endmodule
+
+module MFreg16(din,dout,clk,load,sr,rl);
+input [15:0] din;
+input clk;
+input sr,rl,load;
+output reg[15:0] dout;
+wire[15:0] d0,ds,dr,dsr,dsl,drr,drl;
+wire[15:0] d;
+always@(posedge clk)
+dout<=d;
+assign d=(load)?din:d0;
+assign d0=(sr)?ds:dr;
+assign ds=(rl)?dsr:dsl;
+assign dr=(rl)?drr:drl;
+assign drr={dout[0],dout[15:1]};
+assign drl={dout[14:0],dout[15]};
+assign dsr={1'b0,dout[15:1]};
+assign dsl={dout[14:0],1'b0};
+endmodule
+
+module MFreg(din,dout,clk,load,sr,rl);
+input [7:0] din;
+input clk;
+input sr,rl,load;
+output reg[7:0] dout;
+wire[7:0] d0,ds,dr,dsr,dsl,drr,drl;
+wire[7:0] d;
+always@(posedge clk)
+dout<=d;
+assign d=(load)?din:d0;
+assign d0=(sr)?ds:dr;
+assign ds=(rl)?dsr:dsl;
+assign dr=(rl)?drr:drl;
+assign drr={dout[0],dout[7:1]};
+assign drl={dout[6:0],dout[7]};
+assign dsr={1'b0,dout[7:1]};
+assign dsl={dout[6:0],1'b0};
+endmodule
+
+module csadd16(a,b,cin,s,cout);
+input[15:0] a,b;
+input cin;
+output[15:0] s;
+output cout;
+wire c0,c1,c2;
+wire[7:0] s10,s11;
+cadd8 v0(a[7:0],b[7:0],cin,s[7:0],c0);
+cadd8 v1(a[15:8],b[15:8],1'b0,s10,c1);
+cadd8 v2(a[15:8],b[15:8],1'b1,s11,c2);
+assign s[15:8]=(c0)?s11:s10;
+assign cout=(c0)?c2:c1;
+endmodule
+
+module cadd8(a,b,cin,s,cout);
+input[7:0] a,b;
+input cin;
+output cout;
+output[7:0] s;
+wire w0;
+cadd4 f0(a[3:0],b[3:0],cin,s[3:0],w0);
+cadd4 f1(a[7:4],b[7:4],w0,s[7:4],cout);
+endmodule
+
+module cadd4(A,B,Cin,S,Cout);
+input[3:0] A,B;
+input Cin;
+output[3:0] S;
+output Cout;
+wire[3:0] p,q;
+wire c1,c2,c3;
+assign p[0]=A[0]|B[0];
+assign p[1]=A[1]|B[1];
+assign p[2]=A[2]|B[2];
+assign p[3]=A[3]|B[3];
+assign q[0]=A[0]&B[0];
+assign q[1]=A[1]&B[1];
+assign q[2]=A[2]&B[2];
+assign q[3]=A[3]&B[3];
+assign c1=q[0]|(p[0]&Cin);
+assign c2=q[1]|(p[1]&q[0])|(p[1]&p[0]&Cin);
+assign c3=q[2]|(p[2]&q[1])|(p[2]&p[1]&q[0])|(p[2]&p[1]&p[0]&Cin);
+assign Cout=q[3]|(p[3]&q[2])|(p[3]&p[2]&q[1])|(p[3]&p[2]&p[1]&q[0])|(p[3]&p[2]&p[1]&p[0]&Cin);
+assign S[0]=A[0]^B[0]^Cin;
+assign S[1]=A[1]^B[1]^c1;
+assign S[2]=A[2]^B[2]^c2;
+assign S[3]=A[3]^B[3]^c3;
+endmodule
+
+

@@ -1,0 +1,398 @@
+Simulator report for hw6
+Mon Nov 25 13:32:12 2019
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 us      ;
+; Simulation Netlist Size     ; 119 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                        ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Option                                                                                     ; Setting      ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Simulation mode                                                                            ; Functional   ; Timing        ;
+; Start time                                                                                 ; 0 ns         ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF         ;               ;
+; Vector input source                                                                        ; Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On           ; On            ;
+; Check outputs                                                                              ; Off          ; Off           ;
+; Report simulation coverage                                                                 ; On           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On           ; On            ;
+; Display missing 1-value coverage report                                                    ; On           ; On            ;
+; Display missing 0-value coverage report                                                    ; On           ; On            ;
+; Detect setup and hold time violations                                                      ; Off          ; Off           ;
+; Detect glitches                                                                            ; Off          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off          ; Off           ;
+; Generate Signal Activity File                                                              ; Off          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto         ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 119          ;
+; Total output ports checked                          ; 119          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 119          ;
+; Total output ports with no 1-value coverage         ; 119          ;
+; Total output ports with no 0-value coverage         ; 119          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |B_to_BCD|O~0         ; |B_to_BCD|O~0         ; out              ;
+; |B_to_BCD|O~1         ; |B_to_BCD|O~1         ; out              ;
+; |B_to_BCD|O~2         ; |B_to_BCD|O~2         ; out              ;
+; |B_to_BCD|O~3         ; |B_to_BCD|O~3         ; out              ;
+; |B_to_BCD|O~4         ; |B_to_BCD|O~4         ; out              ;
+; |B_to_BCD|O~5         ; |B_to_BCD|O~5         ; out              ;
+; |B_to_BCD|O~6         ; |B_to_BCD|O~6         ; out              ;
+; |B_to_BCD|O~7         ; |B_to_BCD|O~7         ; out              ;
+; |B_to_BCD|O~8         ; |B_to_BCD|O~8         ; out              ;
+; |B_to_BCD|O~9         ; |B_to_BCD|O~9         ; out              ;
+; |B_to_BCD|O~10        ; |B_to_BCD|O~10        ; out              ;
+; |B_to_BCD|O~11        ; |B_to_BCD|O~11        ; out              ;
+; |B_to_BCD|T~0         ; |B_to_BCD|T~0         ; out              ;
+; |B_to_BCD|T~1         ; |B_to_BCD|T~1         ; out              ;
+; |B_to_BCD|T~2         ; |B_to_BCD|T~2         ; out              ;
+; |B_to_BCD|T~3         ; |B_to_BCD|T~3         ; out              ;
+; |B_to_BCD|O~12        ; |B_to_BCD|O~12        ; out              ;
+; |B_to_BCD|O~13        ; |B_to_BCD|O~13        ; out              ;
+; |B_to_BCD|O~14        ; |B_to_BCD|O~14        ; out              ;
+; |B_to_BCD|O~15        ; |B_to_BCD|O~15        ; out              ;
+; |B_to_BCD|T~4         ; |B_to_BCD|T~4         ; out              ;
+; |B_to_BCD|T~5         ; |B_to_BCD|T~5         ; out              ;
+; |B_to_BCD|T~6         ; |B_to_BCD|T~6         ; out              ;
+; |B_to_BCD|T~7         ; |B_to_BCD|T~7         ; out              ;
+; |B_to_BCD|O~16        ; |B_to_BCD|O~16        ; out              ;
+; |B_to_BCD|O~17        ; |B_to_BCD|O~17        ; out              ;
+; |B_to_BCD|O~18        ; |B_to_BCD|O~18        ; out              ;
+; |B_to_BCD|O~19        ; |B_to_BCD|O~19        ; out              ;
+; |B_to_BCD|B[0]        ; |B_to_BCD|B[0]        ; out              ;
+; |B_to_BCD|B[1]        ; |B_to_BCD|B[1]        ; out              ;
+; |B_to_BCD|B[2]        ; |B_to_BCD|B[2]        ; out              ;
+; |B_to_BCD|B[3]        ; |B_to_BCD|B[3]        ; out              ;
+; |B_to_BCD|B[4]        ; |B_to_BCD|B[4]        ; out              ;
+; |B_to_BCD|B[5]        ; |B_to_BCD|B[5]        ; out              ;
+; |B_to_BCD|B[6]        ; |B_to_BCD|B[6]        ; out              ;
+; |B_to_BCD|B[7]        ; |B_to_BCD|B[7]        ; out              ;
+; |B_to_BCD|H[0]        ; |B_to_BCD|H[0]        ; pin_out          ;
+; |B_to_BCD|H[1]        ; |B_to_BCD|H[1]        ; pin_out          ;
+; |B_to_BCD|H[2]        ; |B_to_BCD|H[2]        ; pin_out          ;
+; |B_to_BCD|H[3]        ; |B_to_BCD|H[3]        ; pin_out          ;
+; |B_to_BCD|T[0]        ; |B_to_BCD|T[0]        ; pin_out          ;
+; |B_to_BCD|T[1]        ; |B_to_BCD|T[1]        ; pin_out          ;
+; |B_to_BCD|T[2]        ; |B_to_BCD|T[2]        ; pin_out          ;
+; |B_to_BCD|T[3]        ; |B_to_BCD|T[3]        ; pin_out          ;
+; |B_to_BCD|O[0]        ; |B_to_BCD|O[0]        ; pin_out          ;
+; |B_to_BCD|O[1]        ; |B_to_BCD|O[1]        ; pin_out          ;
+; |B_to_BCD|O[2]        ; |B_to_BCD|O[2]        ; pin_out          ;
+; |B_to_BCD|O[3]        ; |B_to_BCD|O[3]        ; pin_out          ;
+; |B_to_BCD|LessThan0~0 ; |B_to_BCD|LessThan0~0 ; out0             ;
+; |B_to_BCD|LessThan0~1 ; |B_to_BCD|LessThan0~1 ; out0             ;
+; |B_to_BCD|LessThan0~2 ; |B_to_BCD|LessThan0~2 ; out0             ;
+; |B_to_BCD|LessThan1~0 ; |B_to_BCD|LessThan1~0 ; out0             ;
+; |B_to_BCD|LessThan1~1 ; |B_to_BCD|LessThan1~1 ; out0             ;
+; |B_to_BCD|LessThan1~2 ; |B_to_BCD|LessThan1~2 ; out0             ;
+; |B_to_BCD|LessThan1~3 ; |B_to_BCD|LessThan1~3 ; out0             ;
+; |B_to_BCD|LessThan1~4 ; |B_to_BCD|LessThan1~4 ; out0             ;
+; |B_to_BCD|LessThan2~0 ; |B_to_BCD|LessThan2~0 ; out0             ;
+; |B_to_BCD|LessThan2~1 ; |B_to_BCD|LessThan2~1 ; out0             ;
+; |B_to_BCD|LessThan2~2 ; |B_to_BCD|LessThan2~2 ; out0             ;
+; |B_to_BCD|LessThan2~3 ; |B_to_BCD|LessThan2~3 ; out0             ;
+; |B_to_BCD|LessThan2~4 ; |B_to_BCD|LessThan2~4 ; out0             ;
+; |B_to_BCD|LessThan3~0 ; |B_to_BCD|LessThan3~0 ; out0             ;
+; |B_to_BCD|LessThan3~1 ; |B_to_BCD|LessThan3~1 ; out0             ;
+; |B_to_BCD|LessThan3~2 ; |B_to_BCD|LessThan3~2 ; out0             ;
+; |B_to_BCD|LessThan4~0 ; |B_to_BCD|LessThan4~0 ; out0             ;
+; |B_to_BCD|LessThan4~1 ; |B_to_BCD|LessThan4~1 ; out0             ;
+; |B_to_BCD|LessThan4~2 ; |B_to_BCD|LessThan4~2 ; out0             ;
+; |B_to_BCD|LessThan4~3 ; |B_to_BCD|LessThan4~3 ; out0             ;
+; |B_to_BCD|LessThan4~4 ; |B_to_BCD|LessThan4~4 ; out0             ;
+; |B_to_BCD|LessThan5~0 ; |B_to_BCD|LessThan5~0 ; out0             ;
+; |B_to_BCD|LessThan5~1 ; |B_to_BCD|LessThan5~1 ; out0             ;
+; |B_to_BCD|LessThan5~2 ; |B_to_BCD|LessThan5~2 ; out0             ;
+; |B_to_BCD|LessThan5~3 ; |B_to_BCD|LessThan5~3 ; out0             ;
+; |B_to_BCD|LessThan5~4 ; |B_to_BCD|LessThan5~4 ; out0             ;
+; |B_to_BCD|LessThan6~0 ; |B_to_BCD|LessThan6~0 ; out0             ;
+; |B_to_BCD|LessThan6~1 ; |B_to_BCD|LessThan6~1 ; out0             ;
+; |B_to_BCD|LessThan6~2 ; |B_to_BCD|LessThan6~2 ; out0             ;
+; |B_to_BCD|LessThan6~3 ; |B_to_BCD|LessThan6~3 ; out0             ;
+; |B_to_BCD|LessThan6~4 ; |B_to_BCD|LessThan6~4 ; out0             ;
+; |B_to_BCD|Add0~0      ; |B_to_BCD|Add0~0      ; out0             ;
+; |B_to_BCD|Add0~1      ; |B_to_BCD|Add0~1      ; out0             ;
+; |B_to_BCD|Add0~2      ; |B_to_BCD|Add0~2      ; out0             ;
+; |B_to_BCD|Add0~3      ; |B_to_BCD|Add0~3      ; out0             ;
+; |B_to_BCD|Add0~4      ; |B_to_BCD|Add0~4      ; out0             ;
+; |B_to_BCD|Add1~0      ; |B_to_BCD|Add1~0      ; out0             ;
+; |B_to_BCD|Add1~1      ; |B_to_BCD|Add1~1      ; out0             ;
+; |B_to_BCD|Add1~2      ; |B_to_BCD|Add1~2      ; out0             ;
+; |B_to_BCD|Add1~3      ; |B_to_BCD|Add1~3      ; out0             ;
+; |B_to_BCD|Add1~4      ; |B_to_BCD|Add1~4      ; out0             ;
+; |B_to_BCD|Add1~5      ; |B_to_BCD|Add1~5      ; out0             ;
+; |B_to_BCD|Add2~0      ; |B_to_BCD|Add2~0      ; out0             ;
+; |B_to_BCD|Add2~1      ; |B_to_BCD|Add2~1      ; out0             ;
+; |B_to_BCD|Add2~2      ; |B_to_BCD|Add2~2      ; out0             ;
+; |B_to_BCD|Add2~3      ; |B_to_BCD|Add2~3      ; out0             ;
+; |B_to_BCD|Add2~4      ; |B_to_BCD|Add2~4      ; out0             ;
+; |B_to_BCD|Add2~5      ; |B_to_BCD|Add2~5      ; out0             ;
+; |B_to_BCD|Add3~0      ; |B_to_BCD|Add3~0      ; out0             ;
+; |B_to_BCD|Add3~1      ; |B_to_BCD|Add3~1      ; out0             ;
+; |B_to_BCD|Add3~2      ; |B_to_BCD|Add3~2      ; out0             ;
+; |B_to_BCD|Add3~3      ; |B_to_BCD|Add3~3      ; out0             ;
+; |B_to_BCD|Add3~4      ; |B_to_BCD|Add3~4      ; out0             ;
+; |B_to_BCD|Add4~0      ; |B_to_BCD|Add4~0      ; out0             ;
+; |B_to_BCD|Add4~1      ; |B_to_BCD|Add4~1      ; out0             ;
+; |B_to_BCD|Add4~2      ; |B_to_BCD|Add4~2      ; out0             ;
+; |B_to_BCD|Add4~3      ; |B_to_BCD|Add4~3      ; out0             ;
+; |B_to_BCD|Add4~4      ; |B_to_BCD|Add4~4      ; out0             ;
+; |B_to_BCD|Add4~5      ; |B_to_BCD|Add4~5      ; out0             ;
+; |B_to_BCD|Add5~0      ; |B_to_BCD|Add5~0      ; out0             ;
+; |B_to_BCD|Add5~1      ; |B_to_BCD|Add5~1      ; out0             ;
+; |B_to_BCD|Add5~2      ; |B_to_BCD|Add5~2      ; out0             ;
+; |B_to_BCD|Add5~3      ; |B_to_BCD|Add5~3      ; out0             ;
+; |B_to_BCD|Add5~4      ; |B_to_BCD|Add5~4      ; out0             ;
+; |B_to_BCD|Add5~5      ; |B_to_BCD|Add5~5      ; out0             ;
+; |B_to_BCD|Add6~0      ; |B_to_BCD|Add6~0      ; out0             ;
+; |B_to_BCD|Add6~1      ; |B_to_BCD|Add6~1      ; out0             ;
+; |B_to_BCD|Add6~2      ; |B_to_BCD|Add6~2      ; out0             ;
+; |B_to_BCD|Add6~3      ; |B_to_BCD|Add6~3      ; out0             ;
+; |B_to_BCD|Add6~4      ; |B_to_BCD|Add6~4      ; out0             ;
+; |B_to_BCD|Add6~5      ; |B_to_BCD|Add6~5      ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |B_to_BCD|O~0         ; |B_to_BCD|O~0         ; out              ;
+; |B_to_BCD|O~1         ; |B_to_BCD|O~1         ; out              ;
+; |B_to_BCD|O~2         ; |B_to_BCD|O~2         ; out              ;
+; |B_to_BCD|O~3         ; |B_to_BCD|O~3         ; out              ;
+; |B_to_BCD|O~4         ; |B_to_BCD|O~4         ; out              ;
+; |B_to_BCD|O~5         ; |B_to_BCD|O~5         ; out              ;
+; |B_to_BCD|O~6         ; |B_to_BCD|O~6         ; out              ;
+; |B_to_BCD|O~7         ; |B_to_BCD|O~7         ; out              ;
+; |B_to_BCD|O~8         ; |B_to_BCD|O~8         ; out              ;
+; |B_to_BCD|O~9         ; |B_to_BCD|O~9         ; out              ;
+; |B_to_BCD|O~10        ; |B_to_BCD|O~10        ; out              ;
+; |B_to_BCD|O~11        ; |B_to_BCD|O~11        ; out              ;
+; |B_to_BCD|T~0         ; |B_to_BCD|T~0         ; out              ;
+; |B_to_BCD|T~1         ; |B_to_BCD|T~1         ; out              ;
+; |B_to_BCD|T~2         ; |B_to_BCD|T~2         ; out              ;
+; |B_to_BCD|T~3         ; |B_to_BCD|T~3         ; out              ;
+; |B_to_BCD|O~12        ; |B_to_BCD|O~12        ; out              ;
+; |B_to_BCD|O~13        ; |B_to_BCD|O~13        ; out              ;
+; |B_to_BCD|O~14        ; |B_to_BCD|O~14        ; out              ;
+; |B_to_BCD|O~15        ; |B_to_BCD|O~15        ; out              ;
+; |B_to_BCD|T~4         ; |B_to_BCD|T~4         ; out              ;
+; |B_to_BCD|T~5         ; |B_to_BCD|T~5         ; out              ;
+; |B_to_BCD|T~6         ; |B_to_BCD|T~6         ; out              ;
+; |B_to_BCD|T~7         ; |B_to_BCD|T~7         ; out              ;
+; |B_to_BCD|O~16        ; |B_to_BCD|O~16        ; out              ;
+; |B_to_BCD|O~17        ; |B_to_BCD|O~17        ; out              ;
+; |B_to_BCD|O~18        ; |B_to_BCD|O~18        ; out              ;
+; |B_to_BCD|O~19        ; |B_to_BCD|O~19        ; out              ;
+; |B_to_BCD|B[0]        ; |B_to_BCD|B[0]        ; out              ;
+; |B_to_BCD|B[1]        ; |B_to_BCD|B[1]        ; out              ;
+; |B_to_BCD|B[2]        ; |B_to_BCD|B[2]        ; out              ;
+; |B_to_BCD|B[3]        ; |B_to_BCD|B[3]        ; out              ;
+; |B_to_BCD|B[4]        ; |B_to_BCD|B[4]        ; out              ;
+; |B_to_BCD|B[5]        ; |B_to_BCD|B[5]        ; out              ;
+; |B_to_BCD|B[6]        ; |B_to_BCD|B[6]        ; out              ;
+; |B_to_BCD|B[7]        ; |B_to_BCD|B[7]        ; out              ;
+; |B_to_BCD|H[0]        ; |B_to_BCD|H[0]        ; pin_out          ;
+; |B_to_BCD|H[1]        ; |B_to_BCD|H[1]        ; pin_out          ;
+; |B_to_BCD|H[2]        ; |B_to_BCD|H[2]        ; pin_out          ;
+; |B_to_BCD|H[3]        ; |B_to_BCD|H[3]        ; pin_out          ;
+; |B_to_BCD|T[0]        ; |B_to_BCD|T[0]        ; pin_out          ;
+; |B_to_BCD|T[1]        ; |B_to_BCD|T[1]        ; pin_out          ;
+; |B_to_BCD|T[2]        ; |B_to_BCD|T[2]        ; pin_out          ;
+; |B_to_BCD|T[3]        ; |B_to_BCD|T[3]        ; pin_out          ;
+; |B_to_BCD|O[0]        ; |B_to_BCD|O[0]        ; pin_out          ;
+; |B_to_BCD|O[1]        ; |B_to_BCD|O[1]        ; pin_out          ;
+; |B_to_BCD|O[2]        ; |B_to_BCD|O[2]        ; pin_out          ;
+; |B_to_BCD|O[3]        ; |B_to_BCD|O[3]        ; pin_out          ;
+; |B_to_BCD|LessThan0~0 ; |B_to_BCD|LessThan0~0 ; out0             ;
+; |B_to_BCD|LessThan0~1 ; |B_to_BCD|LessThan0~1 ; out0             ;
+; |B_to_BCD|LessThan0~2 ; |B_to_BCD|LessThan0~2 ; out0             ;
+; |B_to_BCD|LessThan1~0 ; |B_to_BCD|LessThan1~0 ; out0             ;
+; |B_to_BCD|LessThan1~1 ; |B_to_BCD|LessThan1~1 ; out0             ;
+; |B_to_BCD|LessThan1~2 ; |B_to_BCD|LessThan1~2 ; out0             ;
+; |B_to_BCD|LessThan1~3 ; |B_to_BCD|LessThan1~3 ; out0             ;
+; |B_to_BCD|LessThan1~4 ; |B_to_BCD|LessThan1~4 ; out0             ;
+; |B_to_BCD|LessThan2~0 ; |B_to_BCD|LessThan2~0 ; out0             ;
+; |B_to_BCD|LessThan2~1 ; |B_to_BCD|LessThan2~1 ; out0             ;
+; |B_to_BCD|LessThan2~2 ; |B_to_BCD|LessThan2~2 ; out0             ;
+; |B_to_BCD|LessThan2~3 ; |B_to_BCD|LessThan2~3 ; out0             ;
+; |B_to_BCD|LessThan2~4 ; |B_to_BCD|LessThan2~4 ; out0             ;
+; |B_to_BCD|LessThan3~0 ; |B_to_BCD|LessThan3~0 ; out0             ;
+; |B_to_BCD|LessThan3~1 ; |B_to_BCD|LessThan3~1 ; out0             ;
+; |B_to_BCD|LessThan3~2 ; |B_to_BCD|LessThan3~2 ; out0             ;
+; |B_to_BCD|LessThan4~0 ; |B_to_BCD|LessThan4~0 ; out0             ;
+; |B_to_BCD|LessThan4~1 ; |B_to_BCD|LessThan4~1 ; out0             ;
+; |B_to_BCD|LessThan4~2 ; |B_to_BCD|LessThan4~2 ; out0             ;
+; |B_to_BCD|LessThan4~3 ; |B_to_BCD|LessThan4~3 ; out0             ;
+; |B_to_BCD|LessThan4~4 ; |B_to_BCD|LessThan4~4 ; out0             ;
+; |B_to_BCD|LessThan5~0 ; |B_to_BCD|LessThan5~0 ; out0             ;
+; |B_to_BCD|LessThan5~1 ; |B_to_BCD|LessThan5~1 ; out0             ;
+; |B_to_BCD|LessThan5~2 ; |B_to_BCD|LessThan5~2 ; out0             ;
+; |B_to_BCD|LessThan5~3 ; |B_to_BCD|LessThan5~3 ; out0             ;
+; |B_to_BCD|LessThan5~4 ; |B_to_BCD|LessThan5~4 ; out0             ;
+; |B_to_BCD|LessThan6~0 ; |B_to_BCD|LessThan6~0 ; out0             ;
+; |B_to_BCD|LessThan6~1 ; |B_to_BCD|LessThan6~1 ; out0             ;
+; |B_to_BCD|LessThan6~2 ; |B_to_BCD|LessThan6~2 ; out0             ;
+; |B_to_BCD|LessThan6~3 ; |B_to_BCD|LessThan6~3 ; out0             ;
+; |B_to_BCD|LessThan6~4 ; |B_to_BCD|LessThan6~4 ; out0             ;
+; |B_to_BCD|Add0~0      ; |B_to_BCD|Add0~0      ; out0             ;
+; |B_to_BCD|Add0~1      ; |B_to_BCD|Add0~1      ; out0             ;
+; |B_to_BCD|Add0~2      ; |B_to_BCD|Add0~2      ; out0             ;
+; |B_to_BCD|Add0~3      ; |B_to_BCD|Add0~3      ; out0             ;
+; |B_to_BCD|Add0~4      ; |B_to_BCD|Add0~4      ; out0             ;
+; |B_to_BCD|Add1~0      ; |B_to_BCD|Add1~0      ; out0             ;
+; |B_to_BCD|Add1~1      ; |B_to_BCD|Add1~1      ; out0             ;
+; |B_to_BCD|Add1~2      ; |B_to_BCD|Add1~2      ; out0             ;
+; |B_to_BCD|Add1~3      ; |B_to_BCD|Add1~3      ; out0             ;
+; |B_to_BCD|Add1~4      ; |B_to_BCD|Add1~4      ; out0             ;
+; |B_to_BCD|Add1~5      ; |B_to_BCD|Add1~5      ; out0             ;
+; |B_to_BCD|Add2~0      ; |B_to_BCD|Add2~0      ; out0             ;
+; |B_to_BCD|Add2~1      ; |B_to_BCD|Add2~1      ; out0             ;
+; |B_to_BCD|Add2~2      ; |B_to_BCD|Add2~2      ; out0             ;
+; |B_to_BCD|Add2~3      ; |B_to_BCD|Add2~3      ; out0             ;
+; |B_to_BCD|Add2~4      ; |B_to_BCD|Add2~4      ; out0             ;
+; |B_to_BCD|Add2~5      ; |B_to_BCD|Add2~5      ; out0             ;
+; |B_to_BCD|Add3~0      ; |B_to_BCD|Add3~0      ; out0             ;
+; |B_to_BCD|Add3~1      ; |B_to_BCD|Add3~1      ; out0             ;
+; |B_to_BCD|Add3~2      ; |B_to_BCD|Add3~2      ; out0             ;
+; |B_to_BCD|Add3~3      ; |B_to_BCD|Add3~3      ; out0             ;
+; |B_to_BCD|Add3~4      ; |B_to_BCD|Add3~4      ; out0             ;
+; |B_to_BCD|Add4~0      ; |B_to_BCD|Add4~0      ; out0             ;
+; |B_to_BCD|Add4~1      ; |B_to_BCD|Add4~1      ; out0             ;
+; |B_to_BCD|Add4~2      ; |B_to_BCD|Add4~2      ; out0             ;
+; |B_to_BCD|Add4~3      ; |B_to_BCD|Add4~3      ; out0             ;
+; |B_to_BCD|Add4~4      ; |B_to_BCD|Add4~4      ; out0             ;
+; |B_to_BCD|Add4~5      ; |B_to_BCD|Add4~5      ; out0             ;
+; |B_to_BCD|Add5~0      ; |B_to_BCD|Add5~0      ; out0             ;
+; |B_to_BCD|Add5~1      ; |B_to_BCD|Add5~1      ; out0             ;
+; |B_to_BCD|Add5~2      ; |B_to_BCD|Add5~2      ; out0             ;
+; |B_to_BCD|Add5~3      ; |B_to_BCD|Add5~3      ; out0             ;
+; |B_to_BCD|Add5~4      ; |B_to_BCD|Add5~4      ; out0             ;
+; |B_to_BCD|Add5~5      ; |B_to_BCD|Add5~5      ; out0             ;
+; |B_to_BCD|Add6~0      ; |B_to_BCD|Add6~0      ; out0             ;
+; |B_to_BCD|Add6~1      ; |B_to_BCD|Add6~1      ; out0             ;
+; |B_to_BCD|Add6~2      ; |B_to_BCD|Add6~2      ; out0             ;
+; |B_to_BCD|Add6~3      ; |B_to_BCD|Add6~3      ; out0             ;
+; |B_to_BCD|Add6~4      ; |B_to_BCD|Add6~4      ; out0             ;
+; |B_to_BCD|Add6~5      ; |B_to_BCD|Add6~5      ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 25 13:32:11 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off hw6 -c hw6
+Info: Using vector source file "C:/Users/mings/Desktop/hw6/Waveform.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Mon Nov 25 13:32:12 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

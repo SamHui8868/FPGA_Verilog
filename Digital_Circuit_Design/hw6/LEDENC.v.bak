@@ -1,0 +1,7 @@
+module LEDENC(D,addr);
+input [7:0]D;
+output reg [7:0]addr;
+always@(D)
+addr=(8'd183-D)>>1;
+endmodule
+		

@@ -1,0 +1,51 @@
+module dfladd(a,b,y);
+input[31:0] a,b;
+output[31:0] y;
+wire[7:0]ea,eb,d,e;
+wire[25:0]da,db,pdb,fa,fb,all,df,f;
+wire[4:0]num,left;
+wire z;
+
+
+
+assign ea=a[30:23];
+assign eb=b[30:23];
+assign d=ea-eb;
+
+assign da={3'b001,a[22:0]};
+assign db={3'b001,b[22:0]};
+assign pdb=db>>d;
+
+assign fa=(a[31])?(~da+1'b1):(da);
+assign fb=(b[31])?(~pdb+1'b1):(pdb);
+
+assign all=fa+fb;
+
+assign df=(all[25])?(~all+1'd1):all;
+
+prec32 v2({8'd00,df[23:0]},num,z);
+
+assign left=5'd23-num;
+
+assign f=(df[24])?df[23:1]:((z)?26'd0:(df<<left));
+
+
+assign e=(z)?8'd0:(a[30:23]-{3'd0,left});
+
+
+assign y[31]=all[25];
+assign y[30:23]=(df[24])?ea+1:e;
+assign y[22:0]=f[22:0];
+
+endmodule
+
+
+
+
+
+
+
+
+
+
+

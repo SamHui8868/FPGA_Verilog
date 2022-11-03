@@ -1,0 +1,10 @@
+module add6(a,s,cout);
+input [3:0] a;
+output [3:0] s;
+output cout;
+assign s[0]=a[0];
+assign s[1]=~a[1];
+assign s[2]=a[1]^~a[2];
+assign cout=(a[1]|a[2])&a[3];
+assign s[3]=(a[1]|a[2])^a[3];
+endmodule

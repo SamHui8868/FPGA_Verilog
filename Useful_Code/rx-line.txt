@@ -1,0 +1,85 @@
+module rx_line(clk,rx,dout,ready,error,read);
+input clk,rx,read;
+output[7:0] dout;
+output ready,error;
+wire sout,en;
+sreg   s0(1'd0,en,8'd0,dout,rx,sout,clk,1'd0);
+ccu_rx c0(clk,rx,ready,error,en,read);
+endmodule
+
+
+module ccu_rx(clk,rx,ready,error,wr,read);
+input clk,rx,read;
+output reg ready,error,wr;
+reg[1:0] cs,ns;
+reg[2:0]count,ncount;
+
+always@(negedge clk)
+begin
+cs<=ns;
+count<=ncount;
+end
+
+always@(posedge clk)
+case(cs)
+2'd0:
+	begin
+	ns<=(rx)?2'd0:2'd1;
+	ncount<=3'd0;
+	end
+2'd1:
+	begin
+	ns<=2'd2;
+	ncount<=3'd0;
+	end
+2'd2:
+	begin
+	if(count==3'd6)
+	begin
+	ns<=2'd3;
+	ncount<=3'd7;
+	end
+	else
+	begin
+	ns<=2'd2;
+	ncount<=count+1'd1;
+	end
+	end
+	
+2'd3:
+	begin
+	ns<=(rx&&read)?2'd0:2'd3;
+	ncount<=3'd0;
+	end
+endcase
+
+always@(cs)
+case(cs)
+2'd0:
+begin
+ready<=1'd1;
+error<=1'd0;
+wr<=1'd0;
+end
+2'd1:
+begin
+ready<=1'd0;
+error<=1'd0;
+wr<=1'd1;
+end
+2'd2:
+begin
+ready<=1'd0;
+error<=1'd1;
+wr<=1'd1;
+end
+2'd3:
+begin
+ready<=(rx)?1'd1:1'd0;
+error<=(rx)?1'd0:1'd1;
+wr<=1'd0;
+end
+endcase
+endmodule
+
+

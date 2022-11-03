@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'f'
+Slack : -2.780
+TNS   : -103.432
+
+Type  : Slow Model Setup 'fDIV27M:inst4|fout'
+Slack : -0.676
+TNS   : -1.786
+
+Type  : Slow Model Hold 'fDIV27M:inst4|fout'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'f'
+Slack : 0.531
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'f'
+Slack : -2.000
+TNS   : -118.380
+
+Type  : Slow Model Minimum Pulse Width 'fDIV27M:inst4|fout'
+Slack : -0.500
+TNS   : -5.000
+
+Type  : Fast Model Setup 'f'
+Slack : -1.460
+TNS   : -35.404
+
+Type  : Fast Model Setup 'fDIV27M:inst4|fout'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast Model Hold 'fDIV27M:inst4|fout'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'f'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'f'
+Slack : -2.000
+TNS   : -118.380
+
+Type  : Fast Model Minimum Pulse Width 'fDIV27M:inst4|fout'
+Slack : -0.500
+TNS   : -5.000
+
+------------------------------------------------------------

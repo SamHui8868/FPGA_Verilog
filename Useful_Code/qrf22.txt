@@ -1,0 +1,70 @@
+module hw10(din1,din2,sw,wr,addr1,addr2,dout1,dout2);
+input[7:0] din1,din2;
+input[2:0] addr1,addr2;
+input wr,sw;
+output reg[7:0] dout1,dout2;
+wire[7:0] q[7:0];
+wire[7:0] le1,le2,d[7:0];
+
+wire p[7:0];
+bdec v0(addr1,wr,le1);
+bdec v9(addr2,wr,le2);
+
+assign d[0]=(sw)?din1:((le2[0])?din2:din1);
+assign d[1]=(sw)?din2:((le2[1])?din2:din1);
+assign d[2]=(sw)?q[0]:((le2[2])?din2:din1);
+assign d[3]=(sw)?q[1]:((le2[3])?din2:din1);
+assign d[4]=(sw)?q[2]:((le2[4])?din2:din1);
+assign d[5]=(sw)?q[3]:((le2[5])?din2:din1);
+assign d[6]=(sw)?q[4]:((le2[6])?din2:din1);
+assign d[7]=(sw)?q[5]:((le2[7])?din2:din1);
+
+assign p[0]=(sw)?wr:(le1[0]||le2[0]);
+assign p[1]=(sw)?wr:(le1[1]||le2[1]);
+assign p[2]=(sw)?wr:(le1[2]||le2[2]);
+assign p[3]=(sw)?wr:(le1[3]||le2[3]);
+assign p[4]=(sw)?wr:(le1[4]||le2[4]);
+assign p[5]=(sw)?wr:(le1[5]||le2[5]);
+assign p[6]=(sw)?wr:(le1[6]||le2[6]);
+assign p[7]=(sw)?wr:(le1[7]||le2[7]);
+
+dlatch8 v1(p[0],d[0],q[0]); 
+dlatch8 v2(p[1],d[1],q[1]); 
+dlatch8 v3(p[2],d[2],q[2]); 
+dlatch8 v4(p[3],d[3],q[3]); 
+dlatch8 v5(p[4],d[4],q[4]); 
+dlatch8 v6(p[5],d[5],q[5]); 
+dlatch8 v7(p[6],d[6],q[6]); 
+dlatch8 v8(p[7],d[7],q[7]); 
+always@(addr1 or addr2)
+begin
+case(addr1)
+3'd0:dout1<=q[0];
+3'd1:dout1<=q[1];
+3'd2:dout1<=q[2];
+3'd3:dout1<=q[3];
+3'd4:dout1<=q[4];
+3'd5:dout1<=q[5];
+3'd6:dout1<=q[6];
+3'd7:dout1<=q[7];
+endcase
+case(addr2)
+3'd0:dout2<=q[0];
+3'd1:dout2<=q[1];
+3'd2:dout2<=q[2];
+3'd3:dout2<=q[3];
+3'd4:dout2<=q[4];
+3'd5:dout2<=q[5];
+3'd6:dout2<=q[6];
+3'd7:dout2<=q[7];
+endcase
+end
+endmodule
+
+
+
+
+
+
+
+

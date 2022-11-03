@@ -1,0 +1,31 @@
+module stepMotorctr(rest,dir,clk,smctr);
+input rest,dir,clk;
+output[3:0]smctr;
+reg [3:0]smctr;
+reg[2:0]cs,ns;
+
+always @(posedge clk)
+ cs<=ns;
+
+always@(cs)
+case(cs)
+3'd0:smctr<=4'b0000;// _B,_A,B,A
+3'd1:smctr<=4'b0011;
+3'd2:smctr<=4'b0110;
+3'd3:smctr<=4'b1100;
+3'd4:smctr<=4'b1001;
+default:smctr<=4'b0000;
+endcase
+always@(cs)
+if(rest==1)
+ns<=3'd0;
+else
+case(cs)
+3'd0:ns=3'd1;
+3'd1:ns=(dir)?3'd2:3'd4;//rotate direction decide state
+3'd2:ns=(dir)?3'd3:3'd1;
+3'd3:ns=(dir)?3'd4:3'd2;
+3'd4:ns=(dir)?3'd1:3'd3;
+default:ns=3'd0;
+endcase
+endmodule

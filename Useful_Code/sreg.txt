@@ -1,0 +1,14 @@
+module sreg(load,sw,din,dout,sin,sout,clk,lr);
+input load,sw,clk,sin,load,lr;
+input[7:0] din;
+output reg[7:0] dout;
+output sout;
+wire[7:0] _r;
+assign sout=(lr)?dout[7]:dout[0];
+assign _r=(lr)?{dout[6:0],sin}:{sin,dout[7:1]};
+always@(posedge clk)
+if(load)
+dout<=din;
+else
+dout<=(sw)?_r:dout;
+endmodule

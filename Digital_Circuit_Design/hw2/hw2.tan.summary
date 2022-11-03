@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.768 ns
+From           : sel[0]
+To             : fDIV27M:inst|count[31]
+From Clock     : --
+To Clock       : fin
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.306 ns
+From           : stepMotorctr:inst2|cs.100
+To             : A
+From Clock     : fin
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.208 ns
+From           : dir
+To             : stepMotorctr:inst2|cs.011
+From Clock     : --
+To Clock       : fin
+Failed Paths   : 0
+
+Type           : Clock Setup: 'fin'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 212.13 MHz ( period = 4.714 ns )
+From           : fDIV27M:inst|count[16]
+To             : fDIV27M:inst|fout
+From Clock     : fin
+To Clock       : fin
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

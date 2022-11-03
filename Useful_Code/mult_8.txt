@@ -1,0 +1,13 @@
+module mult_8(a,b,m);
+input[7:0] a,b;
+output[15:0] m;
+wire[7:0] m0,m1,m2,m3;
+wire[15:0] m4;
+wire c0;
+mult_4 v0(a[3:0],b[3:0],m0);
+mult_4 v1(a[7:4],b[3:0],m1);
+mult_4 v2(a[3:0],b[7:4],m2);
+mult_4 v3(a[7:4],b[7:4],m3);
+csadd16 v4({4'd0,m1,4'd0},{4'd0,m2,4'd0},1'd0,m4,c0);
+csadd16 v5(m4,{m3,m0},1'd0,m,c0);
+endmodule

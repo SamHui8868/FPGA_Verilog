@@ -1,0 +1,15 @@
+module hw8(code,next,clk,ans);
+input[7:0] code;
+input next,clk;
+output[31:0] ans;
+
+wire[31:0] a,b;
+
+wire n;
+
+oneshot v0(next,clk,1'b1,n);
+qrf8v2  v1(a,n,1'd0,3'd0,a[7:0],a[15:8],a[23:16],a[31:24],b[7:0],b[15:8],b[23:16],b[31:24]);
+
+fladd   v2(a,b,ans);
+
+endmodule

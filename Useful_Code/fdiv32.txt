@@ -1,0 +1,22 @@
+module fdiv32(fin,DIVN,fout);
+input fin;
+input[31:0] DIVN;
+output fout;
+wire[31:0] _DIVN;
+reg __fout;
+wire _fout;
+reg[31:0] count;
+assign _DIVN={1'b0,DIVN[31:1]};
+always@(negedge fin)
+if(count>=DIVN)
+count<=1'd1;
+else
+count<=count+1'd1;
+assign _fout=(count<=_DIVN)?1'b0:1'b1;
+assign fout=(_DIVN==32'd0)?fin:__fout;
+always@(posedge fin)
+__fout<=_fout;
+endmodule
+
+
+

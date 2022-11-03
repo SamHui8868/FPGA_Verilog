@@ -1,0 +1,135 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 23:08:03  December 04, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		hw7_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY TPC
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:08:03  DECEMBER 04, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name VERILOG_FILE FDIV50K.v
+set_global_assignment -name VERILOG_FILE FDIV10.v
+set_global_assignment -name VERILOG_FILE ADctr.v
+set_global_assignment -name VERILOG_FILE ADdff8.v
+set_global_assignment -name VERILOG_FILE Dff8.v
+set_global_assignment -name VERILOG_FILE _7segENC.v
+set_global_assignment -name VERILOG_FILE FDIV50_64k.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE TPC.v
+set_global_assignment -name BDF_FILE hw7.bdf
+set_global_assignment -name MISC_FILE "C:/Users/USER/Desktop/hw7/hw7.dpf"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to _50M
+set_location_assignment PIN_D25 -to start
+set_location_assignment PIN_E26 -to ale
+set_location_assignment PIN_F24 -to eoc
+set_location_assignment PIN_J21 -to clock
+set_location_assignment PIN_F25 -to add[0]
+set_location_assignment PIN_N18 -to data[7]
+set_location_assignment PIN_G23 -to data[6]
+set_location_assignment PIN_K19 -to data[0]
+set_location_assignment PIN_H19 -to data[1]
+set_location_assignment PIN_H25 -to data[2]
+set_location_assignment PIN_J23 -to data[3]
+set_location_assignment PIN_H23 -to data[4]
+set_location_assignment PIN_K22 -to data[5]
+set_location_assignment PIN_K23 -to add[1]
+set_location_assignment PIN_L21 -to gx
+set_location_assignment PIN_L23 -to gy
+set_location_assignment PIN_N25 -to reset
+set_location_assignment PIN_J25 -to xa
+set_location_assignment PIN_L25 -to ya
+set_location_assignment PIN_AF10 -to T1[0]
+set_location_assignment PIN_AB12 -to T1[1]
+set_location_assignment PIN_AC12 -to T1[2]
+set_location_assignment PIN_AD11 -to T1[3]
+set_location_assignment PIN_AE11 -to T1[4]
+set_location_assignment PIN_V14 -to T1[5]
+set_location_assignment PIN_V13 -to T1[6]
+set_location_assignment PIN_V20 -to T2[0]
+set_location_assignment PIN_V21 -to T2[1]
+set_location_assignment PIN_W21 -to T2[2]
+set_location_assignment PIN_Y22 -to T2[3]
+set_location_assignment PIN_AA24 -to T2[4]
+set_location_assignment PIN_AB24 -to T2[6]
+set_location_assignment PIN_AA23 -to T2[5]
+set_location_assignment PIN_AB23 -to X1[0]
+set_location_assignment PIN_V22 -to X1[1]
+set_location_assignment PIN_AC25 -to X1[2]
+set_location_assignment PIN_AC26 -to X1[3]
+set_location_assignment PIN_AB26 -to X1[4]
+set_location_assignment PIN_AB25 -to X1[5]
+set_location_assignment PIN_Y24 -to X1[6]
+set_location_assignment PIN_Y23 -to X2[0]
+set_location_assignment PIN_AA25 -to X2[1]
+set_location_assignment PIN_AA26 -to X2[2]
+set_location_assignment PIN_Y26 -to X2[3]
+set_location_assignment PIN_Y25 -to X2[4]
+set_location_assignment PIN_U22 -to X2[5]
+set_location_assignment PIN_W24 -to X2[6]
+set_location_assignment PIN_U9 -to Y1[0]
+set_location_assignment PIN_U1 -to Y1[1]
+set_location_assignment PIN_U2 -to Y1[2]
+set_location_assignment PIN_T4 -to Y1[3]
+set_location_assignment PIN_R7 -to Y1[4]
+set_location_assignment PIN_R6 -to Y1[5]
+set_location_assignment PIN_T3 -to Y1[6]
+set_location_assignment PIN_R3 -to Y2[6]
+set_location_assignment PIN_R4 -to Y2[5]
+set_location_assignment PIN_R5 -to Y2[4]
+set_location_assignment PIN_T9 -to Y2[3]
+set_location_assignment PIN_P7 -to Y2[2]
+set_location_assignment PIN_P6 -to Y2[1]
+set_location_assignment PIN_T2 -to Y2[0]
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/user/Desktop/EE exp3/hw7/Waveform.vwf"

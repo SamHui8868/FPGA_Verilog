@@ -1,0 +1,94 @@
+module tx_line(reset,load,clk,din,dout,sout);
+input load,clk,reset;
+input[7:0] din;
+output [7:0] dout;
+output reg sout;
+reg[31:0] divn;
+wire clk,en,_load,_sout,__sout,psout,s_sel,pload;
+oneshot b0(load,clk,reset,pload);
+
+tx_ccu c1(reset,pload,clk,en,_load,s_sel,__sout);
+sreg   s1(_load,en,din,dout,_sout,_sout,clk,1'd0);
+assign psout=(s_sel)?__sout:_sout;
+always@(posedge clk)
+sout<=psout;
+
+endmodule
+
+module tx_ccu(reset,load,clk,en,_load,s_sel,__sout);
+input load,clk,reset;
+output reg en,s_sel,_load,__sout;
+reg [2:0]ns,cs;
+reg [3:0]count,ncount;
+
+always@(negedge clk)
+begin
+cs<=ns;
+count<=ncount;
+end
+always@(cs or load or reset)
+begin
+
+if(reset==1'b0)
+	begin
+	ns<=3'd0;
+	ncount<=4'd0;
+	end
+else
+	case(cs)
+	3'd0:
+	begin
+	ns<=(load)?3'd1:3'd0;
+	ncount<=4'd0;
+	end
+	3'd1:
+	begin
+	ns<=3'd2;
+	ncount<=4'd0;
+	end
+	3'd2:
+	begin
+	ns<=(count>4'd6)?3'd3:3'd2;
+	ncount<=count+4'd1;
+	end
+	3'd3:
+	begin
+	ns<=3'd0;
+	ncount<=4'd0;
+	end
+	endcase
+end
+always@(cs)
+case(cs)
+3'd0:
+	begin
+	en<=1'd0;
+	_load<=1'd0;
+	__sout<=1'd1;
+	s_sel<=1'd1;
+	end
+3'd1:
+	begin
+	en<=1'd0;
+	_load<=1'd1;
+	__sout<=1'd0;
+	s_sel<=1'd1;
+	end
+
+3'd2:
+	begin
+	en<=1'd1;
+	_load<=1'd0;
+	__sout<=1'd0;
+	s_sel<=1'd0;
+	end
+
+3'd3:
+	begin
+	en<=1'd0;
+	_load<=1'd0;
+	__sout<=1'd1;
+	s_sel<=1'd1;
+	end
+endcase
+endmodule

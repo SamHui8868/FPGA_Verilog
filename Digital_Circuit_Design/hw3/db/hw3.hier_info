@@ -1,0 +1,16 @@
+|compare
+Sout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => Equal0.IN5
+A[1] => Equal0.IN4
+A[2] => Equal0.IN3
+A[3] => Equal0.IN2
+A[4] => Equal0.IN1
+A[5] => Equal0.IN0
+B[0] => Equal0.IN11
+B[1] => Equal0.IN10
+B[2] => Equal0.IN9
+B[3] => Equal0.IN8
+B[4] => Equal0.IN7
+B[5] => Equal0.IN6
+
+

@@ -1,0 +1,41 @@
+module div(dv,dvn,q0,q1,r,clk,reset);
+input[7:0] dv,dvn;
+input clk,reset;
+output reg[7:0] r;
+wire[2:0] d;
+output[7:0] q0,q1;
+reg[7:0] q;
+reg[2:0] _d;
+reg[7:0] _dvn;
+wire z;
+prec8 v0(dvn,d,z);
+
+always@(posedge clk )
+
+if(reset==1'b0)
+	begin
+		_dvn=dvn<<_d-3'b1;
+		q=8'd0;
+		_d=~d+3'b1;
+		r=dv;
+	end
+else
+begin
+    if(dvn==8'b1)
+    begin
+	q<=dv;
+	r<=8'b0;
+	end
+	else if(_d!=3'b000)
+   	begin
+		q=q<<1;
+		q=(r>=_dvn)?(q+8'b1):(q);
+		r=(r>=_dvn)?(r-_dvn):(r);
+		_dvn=_dvn>>1;
+		_d=_d-3'b001;
+	end	
+	
+end	
+_7seg v1(q[3:0],q0);
+_7seg v2(q[7:4],q1);
+endmodule

@@ -1,0 +1,168 @@
+$comment
+	File created using the following command:
+		vcd file hw3.msim.vcd -direction
+$end
+$date
+	Sun Oct 27 17:42:52 2019
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Comparator_vlg_vec_tst $end
+$var reg 6 ! A [5:0] $end
+$var reg 6 " B [5:0] $end
+$var wire 1 # Sout $end
+$var wire 1 $ sampler $end
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + Add0~6_combout $end
+$var wire 1 , Add0~1 $end
+$var wire 1 - Add0~3 $end
+$var wire 1 . Add0~5 $end
+$var wire 1 / Add0~7 $end
+$var wire 1 0 Add0~9 $end
+$var wire 1 1 Add0~10_combout $end
+$var wire 1 2 Add0~8_combout $end
+$var wire 1 3 Add0~0_combout $end
+$var wire 1 4 Add0~2_combout $end
+$var wire 1 5 Add0~4_combout $end
+$var wire 1 6 Equal0~0_combout $end
+$var wire 1 7 Equal0~1_combout $end
+$var wire 1 8 A~combout [5] $end
+$var wire 1 9 A~combout [4] $end
+$var wire 1 : A~combout [3] $end
+$var wire 1 ; A~combout [2] $end
+$var wire 1 < A~combout [1] $end
+$var wire 1 = A~combout [0] $end
+$var wire 1 > B~combout [5] $end
+$var wire 1 ? B~combout [4] $end
+$var wire 1 @ B~combout [3] $end
+$var wire 1 A B~combout [2] $end
+$var wire 1 B B~combout [1] $end
+$var wire 1 C B~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111 !
+b0 "
+0#
+x$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+1,
+0-
+1.
+0/
+10
+01
+02
+13
+14
+15
+06
+07
+1=
+1<
+1;
+0:
+09
+08
+0C
+0B
+0A
+0@
+0?
+0>
+$end
+#100000
+b1 "
+1C
+0$
+03
+#200000
+b11 "
+b10 "
+0C
+1B
+1$
+13
+04
+#300000
+b11 "
+1C
+0$
+03
+#400000
+b111 "
+b101 "
+b100 "
+0C
+0B
+1A
+1$
+13
+14
+05
+#500000
+b101 "
+1C
+0$
+03
+#600000
+b111 "
+b110 "
+0C
+1B
+1$
+13
+04
+#700000
+b111 "
+1C
+0$
+03
+16
+17
+1#
+#800000
+b1111 "
+b1011 "
+b1001 "
+b1000 "
+0C
+0B
+0A
+1@
+1$
+13
+14
+15
+1/
+1+
+06
+00
+12
+07
+11
+0#
+#900000
+b1001 "
+1C
+0$
+03
+#1000000

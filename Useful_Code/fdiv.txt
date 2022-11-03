@@ -1,0 +1,22 @@
+module fdiv(fin,DIVN,fout);
+input fin;
+input[7:0] DIVN;
+output fout;
+wire[7:0] _DIVN;
+reg __fout;
+wire _fout;
+reg[7:0] count;
+assign _DIVN={1'b0,DIVN[7:1]};
+always@(negedge fin)
+if(count>=DIVN)
+count<=8'd1;
+else
+count<=count+8'd1;
+assign _fout=(count<=_DIVN)?1'b0:1'b1;
+assign fout=(_DIVN==8'd0)?fin:__fout;
+always@(posedge fin)
+__fout<=_fout;
+endmodule
+
+
+

@@ -1,0 +1,45 @@
+module qrf8(din,sw,wr,addr,q0,q1,q2,q3,q4,q5,q6,q7);
+input[7:0] din;
+input[2:0] addr;
+input wr,sw;
+output wire[7:0] q0,q1,q2,q3,q4,q5,q6,q7;
+wire[7:0] le,d[6:0];
+wire p[7:0];
+bdec v0(addr,wr,le);
+
+assign d[0]=(sw)?q0:din;
+assign d[1]=(sw)?q1:din;
+assign d[2]=(sw)?q2:din;
+assign d[3]=(sw)?q3:din;
+assign d[4]=(sw)?q4:din;
+assign d[5]=(sw)?q5:din;
+assign d[6]=(sw)?q6:din;
+
+assign p[0]=(sw)?wr:le[0];
+assign p[1]=(sw)?wr:le[1];
+assign p[2]=(sw)?wr:le[2];
+assign p[3]=(sw)?wr:le[3];
+assign p[4]=(sw)?wr:le[4];
+assign p[5]=(sw)?wr:le[5];
+assign p[6]=(sw)?wr:le[6];
+assign p[7]=(sw)?wr:le[7];
+
+dlatch8 v1(p[0],din,q0); 
+dlatch8 v2(p[1],d[0],q1); 
+dlatch8 v3(p[2],d[1],q2); 
+dlatch8 v4(p[3],d[2],q3); 
+dlatch8 v5(p[4],d[3],q4); 
+dlatch8 v6(p[5],d[4],q5); 
+dlatch8 v7(p[6],d[5],q6); 
+dlatch8 v8(p[7],d[6],q7); 
+
+
+endmodule
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+module MFreg(din,dout,clk,load,sr,rl);
+input [7:0] din;
+input clk;
+input sr,rl,load;
+output reg[7:0] dout;
+wire[7:0] d0,ds,dr,dsr,dsl,drr,drl;
+wire[7:0] d;
+always@(posedge clk)
+dout<=d;
+assign d=(load)?din:d0;
+assign d0=(sr)?ds:dr;
+assign ds=(rl)?dsr:dsl;
+assign dr=(rl)?drr:drl;
+assign drr={dout[0],dout[7:1]};
+assign drl={dout[6:0],dout[7]};
+assign dsr={1'b0,dout[7:1]};
+assign dsl={dout[6:0],1'b0};
+endmodule
